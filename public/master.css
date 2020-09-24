@@ -33,14 +33,33 @@ section {
   padding: 10px;
 }
 
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 #projects > div {
   max-width: 500px;
   background-color: #f1f1f1;
-  padding: 10px;
   border-radius: 10px;
   box-shadow: 0 0 4px 0px #a7a7a7;
 }
 
-#projects > div > h3 {
+#projects > div h3 {
   margin: 0;
+}
+
+#projects > div > div:first-child {
+  width: 500px;
+  height: 261px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+
+  background-position: center;
+  background-size: cover;
+}
+
+#projects > div > div:last-child {
+  padding: 10px;
 }

@@ -1,0 +1,13 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="50" fill="royalblue" />
+
+  <!-- Fill circle with a gradient -->
+  <!-- <defs>
+    <radialGradient id="myGradient">
+      <stop offset="0%"   stop-color="pink" />
+      <stop offset="100%" stop-color="black" />
+    </radialGradient>
+  </defs>
+
+  <circle cx="50" cy="50" r="40" fill="url(#myGradient)" /> -->
+</svg>
