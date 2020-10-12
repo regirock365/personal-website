@@ -36,7 +36,7 @@ section {
 #projects {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  /* gap: 20px; */
 }
 
 #projects > div {
@@ -44,6 +44,7 @@ section {
   background-color: #f1f1f1;
   border-radius: 10px;
   box-shadow: 0 0 4px 0px #a7a7a7;
+  margin: 10px;
 }
 
 #projects > div h3 {
@@ -58,6 +59,8 @@ section {
 
   background-position: center;
   background-size: cover;
+
+  overflow: hidden;
 }
 
 #projects > div > div:last-child {
