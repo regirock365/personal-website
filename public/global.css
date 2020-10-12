@@ -45,6 +45,8 @@ section {
   border-radius: 10px;
   box-shadow: 0 0 4px 0px #a7a7a7;
   margin: 10px;
+
+  overflow: hidden;
 }
 
 #projects > div h3 {
@@ -59,8 +61,6 @@ section {
 
   background-position: center;
   background-size: cover;
-
-  overflow: hidden;
 }
 
 #projects > div > div:last-child {
