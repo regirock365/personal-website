@@ -11,7 +11,7 @@ const Home: React.FC<Props> = () => {
           alt="Picture of me"
         />
         <div>
-          <h1>Hemedi Saidi</h1>
+          <h1>Regirock365</h1>
           <span>Web Developer</span>
         </div>
       </header>
