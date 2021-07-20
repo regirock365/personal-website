@@ -5,18 +5,19 @@ interface Props {}
 const Home: React.FC<Props> = () => {
   return (
     <>
-      <header>
+      <header className="flex items-center">
         <img
           src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
           alt="Picture of me"
+          className="w-32 h-32 m-2 rounded-full shadow-lg"
         />
-        <div>
+        <div className="ml-3">
           <h1>Regirock365</h1>
-          <span>Web Developer</span>
+          <span className="text-xl">Web Developer</span>
         </div>
       </header>
 
-      <section id="online">
+      <section id="online" className="p-3">
         <h2>Online Presence</h2>
         <div>
           Github:
@@ -50,9 +51,9 @@ const Home: React.FC<Props> = () => {
         </div>
       </section>
 
-      <section>
+      <section className="p-3">
         <h2>Projects</h2>
-        <div id="projects">
+        <div id="projects" className="flex flex-wrap">
           <div>
             <div
               style={{

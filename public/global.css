@@ -1,3 +1,30 @@
+@tailwind base;
+
+@tailwind components;
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl text-gray-900;
+}
+
+h3 {
+  @apply text-2xl text-gray-800;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+p,
+small {
+  @apply text-gray-700;
+}
+
+@tailwind utilities;
+
 @import url("https://rsms.me/inter/inter.css");
 html {
   font-family: "Inter", "Work Sans", "Helvetica Neue", Roboto, sans-serif;
@@ -8,36 +35,34 @@ html {
   }
 }
 
-header {
+/* header {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
-}
+} */
 
-header > div {
+/* header > div {
   margin-left: 10px;
-}
+} */
 
-header > div > * {
+/* header > div > * {
   margin: 0;
-}
+} */
 
-header > img {
+/* header > img {
   width: 80px;
   margin: 5px;
   border-radius: 50%;
   box-shadow: 0px 0px 5px 2px #737373;
-}
+} */
 
-section {
+/* section {
   padding: 10px;
-}
+} */
 
-#projects {
+/* #projects {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 20px; */
-}
+} */
 
 #projects > div {
   max-width: 500px;
