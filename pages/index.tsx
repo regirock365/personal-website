@@ -12,7 +12,7 @@ const Home: React.FC<Props> = () => {
             "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
         }}
       >
-        <div className="bg-gradient-to-b from-white/25 to-white backdrop-blur pb-8">
+        <div className="bg-gradient-to-b from-white/25 to-white backdrop-blur pb-8 lg:pb-20">
           <header className="flex items-center">
             <img
               src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
@@ -69,7 +69,7 @@ const Home: React.FC<Props> = () => {
             className="w-32 h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
             }}
           />
           <div>
@@ -94,7 +94,7 @@ const Home: React.FC<Props> = () => {
             className="w-32 h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/v1601877136/Convert_Meta_Image_xzs3x2.png')",
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1601877136/Convert_Meta_Image_xzs3x2.png')",
             }}
           />
           <div>
@@ -118,7 +118,7 @@ const Home: React.FC<Props> = () => {
             className="w-32 h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
             }}
           />
           <div>
@@ -140,7 +140,7 @@ const Home: React.FC<Props> = () => {
         {/* <div>
           <div
             style="
-              background-image: url('https://res.cloudinary.com/projectgroceries/image/upload/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png');
+              background-image: url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png');
             "
           ></div>
           <div>
