@@ -5,130 +5,139 @@ interface Props {}
 const Home: React.FC<Props> = () => {
   return (
     <>
-      <header className="flex items-center">
-        <img
-          src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
-          alt="Picture of me"
-          className="w-32 h-32 m-2 rounded-full shadow-lg"
-        />
-        <div className="ml-3">
-          <h1>Regirock365</h1>
-          <span className="text-xl">Web Developer</span>
+      <div
+        className="bg-cover bg-top"
+        style={{
+          backgroundImage:
+            "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
+        }}
+      >
+        <div className="bg-gradient-to-b from-white/25 to-white backdrop-blur pb-8">
+          <header className="flex items-center">
+            <img
+              src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
+              alt="Picture of me"
+              className="w-32 h-32 m-2 rounded-full shadow-lg border-2 border-amber-500"
+            />
+            <div className="ml-3">
+              <h1>regirock365</h1>
+              <span className="text-xl">Web Developer</span>
+            </div>
+          </header>
+          <section id="online" className="flex items-center p-3 pt-0">
+            <div className="w-32 m-2 h-2"> {/** asdasdasd */}</div>
+            <div>
+              <div className="text-xl flex items-center gap-2">
+                Github:
+                <a
+                  href="https://github.com/regirock365"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  regirock365
+                </a>
+              </div>
+              <div className="text-xl flex items-center gap-2">
+                Twitter:
+                <a
+                  href="https://twitter.com/regirock365"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  regirock365
+                </a>
+              </div>
+              <div className="text-xl flex items-center gap-2">
+                Unsplash:
+                <a
+                  href="https://unsplash.com/@regirock365"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  @regirock365
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
-      </header>
-
-      <section id="online" className="p-3">
-        <h2>Online Presence</h2>
-        <div>
-          Github:
-          <a
-            href="https://github.com/regirock365"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            regirock365
-          </a>
-        </div>
-        <div>
-          Twitter:
-          <a
-            href="https://twitter.com/regirock365"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            regirock365
-          </a>
-        </div>
-        <div>
-          Unsplash:
-          <a
-            href="https://unsplash.com/@regirock365"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @regirock365
-          </a>
-        </div>
-      </section>
+      </div>
 
       <section className="p-3">
-        <h2>Projects</h2>
-        <div id="projects" className="flex flex-wrap">
+        <h2 className="">Projects</h2>
+        <div className="flex my-5">
+          <div
+            className="w-32 h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
+            }}
+          />
           <div>
-            <div
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/projectgroceries/image/upload/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
-              }}
-            ></div>
-            <div>
-              <h3>
-                Project Groceries (
-                <a
-                  href="https://projectgroceries.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  projectgroceries.com
-                </a>
-                )
-              </h3>
-              <p>
-                A website designed for home economics teachers to make the job
-                of food ordering easier and more streamlined.
-              </p>
-            </div>
+            <h3>Project Groceries</h3>
+            <a
+              href="https://projectgroceries.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 active:text-blue-800"
+            >
+              projectgroceries.com
+            </a>
+            <p className="max-w-xl">
+              A website designed for home economics teachers to make the job of
+              food ordering easier and more streamlined.
+            </p>
           </div>
+        </div>
 
+        <div className="flex my-5">
+          <div
+            className="w-32 h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/v1601877136/Convert_Meta_Image_xzs3x2.png')",
+            }}
+          />
           <div>
-            <div
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/projectgroceries/image/upload/v1601877136/Convert_Meta_Image_xzs3x2.png')",
-              }}
-            ></div>
-            <div>
-              <h3>
-                Convert (
-                <a
-                  href="https://convert.projectgroceries.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  convert.projectgroceries.com
-                </a>
-                )
-              </h3>
-              <p>A conversion tool for common ingredient measurements</p>
-            </div>
+            <h3>Convert</h3>
+            <a
+              href="https://convert.projectgroceries.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 active:text-blue-800"
+            >
+              convert.projectgroceries.com
+            </a>
+            <p className="max-w-xl">
+              A conversion tool for common ingredient measurements.
+            </p>
           </div>
+        </div>
 
+        <div className="flex my-5">
+          <div
+            className="w-32 h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
+            }}
+          />
           <div>
-            <div
-              style={{
-                backgroundImage:
-                  "url('https://res.cloudinary.com/projectgroceries/image/upload/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
-              }}
-            ></div>
-            <div>
-              <h3>
-                Recipe Generator (
-                <a
-                  href="https://recipegenerator.ai/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  recipegenerator.ai
-                </a>
-                )
-              </h3>
-              <p>
-                Type in what you're looking for and get an AI generated recipe!
-              </p>
-            </div>
+            <h3>Recipe Generator</h3>
+            <a
+              href="https://recipegenerator.ai/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:text-blue-600 active:text-blue-800"
+            >
+              recipegenerator.ai
+            </a>
+            <p className="max-w-xl">
+              Type in what you're looking for and get an AI generated recipe!
+            </p>
           </div>
+        </div>
 
-          {/* <div>
+        {/* <div>
           <div
             style="
               background-image: url('https://res.cloudinary.com/projectgroceries/image/upload/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png');
@@ -146,7 +155,6 @@ const Home: React.FC<Props> = () => {
             <p>An aggregated search engine for recipes</p>
           </div>
         </div> */}
-        </div>
       </section>
     </>
   );

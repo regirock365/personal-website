@@ -10,7 +10,7 @@ const Meta: React.FC<MetaProps> = () => (
     <meta name="theme-color" content="royalblue" />
     <link rel="shortcut icon" href="/favicon.svg" />
 
-    <title>Regirock365</title>
+    <title>regirock365</title>
   </Head>
 );
 
