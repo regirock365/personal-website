@@ -9,6 +9,7 @@ const projects = [
       "A website designed for home economics teachers to make the job of food ordering easier and more streamlined.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1599364438/Project_Groceries_Card_Image_jjm3gs.png",
+    time: "2015 <=> Present",
   },
   {
     title: "Convert",
@@ -17,6 +18,7 @@ const projects = [
     description: "A conversion tool for common ingredient measurements.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1601877136/Convert_Meta_Image_xzs3x2.png",
+    time: "2020 <=> Present",
   },
   {
     title: "Recipe Generator",
@@ -26,6 +28,7 @@ const projects = [
       "Type in what you're looking for and get an AI generated recipe!",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
+    time: "2021 <=> Present",
   },
   // {
   //   title: "Recipe Search",
@@ -34,6 +37,7 @@ const projects = [
   //   description: "An aggregated search engine for recipes",
   //   imageURL:
   //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
+  //   time: "2015 <=> present"
   // },
 ];
 
@@ -114,14 +118,18 @@ const Home: React.FC<Props> = () => {
             />
             <div>
               <h3>{project.title}</h3>
-              <a
-                href={project.address}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-500 hover:text-blue-600 active:text-blue-800"
-              >
-                {project.link}
-              </a>
+              <div className="flex items-center gap-5">
+                <a
+                  href={project.address}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 hover:text-blue-600 active:text-blue-800"
+                >
+                  {project.link}
+                </a>
+                <span className="w-5 border border-gray-400"></span>
+                <span className="text-gray-600">{project.time}</span>
+              </div>
               <p className="max-w-xl">{project.description}</p>
             </div>
           </div>
