@@ -69,7 +69,7 @@ const Home: React.FC<Props> = () => {
             className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
             }}
           />
           <div>
@@ -94,7 +94,7 @@ const Home: React.FC<Props> = () => {
             className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1601877136/Convert_Meta_Image_xzs3x2.png')",
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1601877136/Convert_Meta_Image_xzs3x2.png')",
             }}
           />
           <div>
@@ -118,7 +118,7 @@ const Home: React.FC<Props> = () => {
             className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
+                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
             }}
           />
           <div>
@@ -140,7 +140,7 @@ const Home: React.FC<Props> = () => {
         {/* <div>
           <div
             style="
-              background-image: url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_250/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png');
+              background-image: url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png');
             "
           ></div>
           <div>
