@@ -1,5 +1,42 @@
 import Head from "next/head";
 
+const projects = [
+  {
+    title: "Project Groceries",
+    link: "projectgroceries.com",
+    address: "https://projectgroceries.com/",
+    description:
+      "A website designed for home economics teachers to make the job of food ordering easier and more streamlined.",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1599364438/Project_Groceries_Card_Image_jjm3gs.png",
+  },
+  {
+    title: "Convert",
+    link: "convert.projectgroceries.com",
+    address: "https://convert.projectgroceries.com/",
+    description: "A conversion tool for common ingredient measurements.",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1601877136/Convert_Meta_Image_xzs3x2.png",
+  },
+  {
+    title: "Recipe Generator",
+    link: "recipegenerator.ai",
+    address: "https://recipegenerator.ai/",
+    description:
+      "Type in what you're looking for and get an AI generated recipe!",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
+  },
+  // {
+  //   title: "Recipe Search",
+  //   link: "recipes.projectgroceries.com",
+  //   address: "https://recipes.projectgroceries.com/",
+  //   description: "An aggregated search engine for recipes",
+  //   imageURL:
+  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
+  // },
+];
+
 interface Props {}
 
 const Home: React.FC<Props> = () => {
@@ -64,97 +101,31 @@ const Home: React.FC<Props> = () => {
 
       <section className="p-3">
         <h2 className="mb-3">Projects</h2>
-        <div className="flex flex-col md:flex-row mb-10 md:my-5">
+        {projects.map((project) => (
           <div
-            className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1599364438/Project_Groceries_Card_Image_jjm3gs.png')",
-            }}
-          />
-          <div>
-            <h3>Project Groceries</h3>
-            <a
-              href="https://projectgroceries.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-600 active:text-blue-800"
-            >
-              projectgroceries.com
-            </a>
-            <p className="max-w-xl">
-              A website designed for home economics teachers to make the job of
-              food ordering easier and more streamlined.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row mb-10 md:my-5">
-          <div
-            className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1601877136/Convert_Meta_Image_xzs3x2.png')",
-            }}
-          />
-          <div>
-            <h3>Convert</h3>
-            <a
-              href="https://convert.projectgroceries.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-600 active:text-blue-800"
-            >
-              convert.projectgroceries.com
-            </a>
-            <p className="max-w-xl">
-              A conversion tool for common ingredient measurements.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-col md:flex-row mb-10 md:my-5">
-          <div
-            className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
-            style={{
-              backgroundImage:
-                "url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png')",
-            }}
-          />
-          <div>
-            <h3>Recipe Generator</h3>
-            <a
-              href="https://recipegenerator.ai/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:text-blue-600 active:text-blue-800"
-            >
-              recipegenerator.ai
-            </a>
-            <p className="max-w-xl">
-              Type in what you're looking for and get an AI generated recipe!
-            </p>
-          </div>
-        </div>
-
-        {/* <div>
-          <div
-            style="
-              background-image: url('https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png');
-            "
-          ></div>
-          <div>
-            <h3>
-              Recipes (<a
-                href="https://recipes.projectgroceries.com/"
+            key={project.title}
+            className="flex flex-col md:flex-row mb-10 md:my-5"
+          >
+            <div
+              className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
+              style={{
+                backgroundImage: `url('${project.imageURL}')`,
+              }}
+            />
+            <div>
+              <h3>{project.title}</h3>
+              <a
+                href={project.address}
                 target="_blank"
                 rel="noopener noreferrer"
-                >recipes.projectgroceries.com</a
-              >)
-            </h3>
-            <p>An aggregated search engine for recipes</p>
+                className="text-blue-500 hover:text-blue-600 active:text-blue-800"
+              >
+                {project.link}
+              </a>
+              <p className="max-w-xl">{project.description}</p>
+            </div>
           </div>
-        </div> */}
+        ))}
       </section>
     </>
   );
