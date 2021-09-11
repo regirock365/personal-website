@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { classNames } from "../lib/util";
 
 const projects = [
   {
@@ -30,15 +31,27 @@ const projects = [
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
     time: "2021 <=> Present",
   },
-  // {
-  //   title: "Recipe Search",
-  //   link: "recipes.projectgroceries.com",
-  //   address: "https://recipes.projectgroceries.com/",
-  //   description: "An aggregated search engine for recipes",
-  //   imageURL:
-  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
-  //   time: "2015 <=> present"
-  // },
+  {
+    title: "Jibu AI",
+    link: "regirock365.com",
+    address: "https://regirock365.com/",
+    description:
+      "search engine - oracle - that is really a collection of search engines. Search for books etc.",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg",
+    time: "Coming Soon...",
+    soon: true,
+  },
+  {
+    title: "Recipe Search",
+    link: "recipes.projectgroceries.com",
+    address: "https://recipes.projectgroceries.com/",
+    description: "An aggregated search engine for recipes",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
+    time: "Coming Soon...",
+    soon: true,
+  },
 ];
 
 interface Props {}
@@ -112,7 +125,10 @@ const Home: React.FC<Props> = () => {
             className="flex flex-col md:flex-row mb-10 md:my-5"
           >
             <div
-              className="w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center"
+              className={classNames(
+                "w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center",
+                project.soon ? "animate-pulse" : ""
+              )}
               style={{
                 backgroundImage: `url('${project.imageURL}')`,
               }}
