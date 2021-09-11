@@ -127,7 +127,7 @@ const Home: React.FC<Props> = () => {
             <div
               className={classNames(
                 "w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center",
-                project.soon ? "animate-pulse" : ""
+                project.soon ? "animate-pulse cursor-wait" : ""
               )}
               style={{
                 backgroundImage: `url('${project.imageURL}')`,
