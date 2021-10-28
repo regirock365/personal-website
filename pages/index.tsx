@@ -119,6 +119,13 @@ const Home: React.FC<Props> = () => {
 
       <section className="p-3 sticky">
         <h2 className="mb-3">Projects</h2>
+        <a
+          href="https://wormhole.app/YA3kN#PclvzXlW9ceDH-rHqvP8aQ"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Secret Link
+        </a>
         {projects.map((project) => (
           <div
             key={project.title}
