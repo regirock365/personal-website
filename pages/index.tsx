@@ -66,15 +66,17 @@ const Home: React.FC<Props> = () => {
             "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
         }}
       >
-        <div className="h-96 w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur" />
+        <div className="h-[500px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur" />
       </div>
       <div className="pb-8 sticky">
         <header className="flex items-center">
-          <img
-            src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
-            alt="Picture of me"
-            className="w-32 h-32 m-2 rounded-full shadow-lg border-2 border-amber-500"
-          />
+          <div className="p-1 m-2 rounded-full bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500">
+            <img
+              src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
+              alt="Picture of me"
+              className="w-32 h-32 rounded-full shadow-lg"
+            />
+          </div>
           <div className="ml-3">
             <h1>regirock365</h1>
             <span className="text-xl">Web Developer</span>
@@ -127,11 +129,17 @@ const Home: React.FC<Props> = () => {
             <div
               className={classNames(
                 "w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center",
-                project.soon ? "animate-pulse cursor-wait" : ""
+                project.soon
+                  ? "animate-pulse cursor-wait bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500"
+                  : ""
               )}
-              style={{
-                backgroundImage: `url('${project.imageURL}')`,
-              }}
+              style={
+                project.soon
+                  ? {}
+                  : {
+                      backgroundImage: `url('${project.imageURL}')`,
+                    }
+              }
             />
             <div>
               <h3>{project.title}</h3>
