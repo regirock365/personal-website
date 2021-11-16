@@ -32,11 +32,10 @@ const projects = [
     time: "2021 <=> Present",
   },
   {
-    title: "Jibu AI",
-    link: "regirock365.com",
-    address: "https://regirock365.com/",
-    description:
-      "search engine - oracle - that is really a collection of search engines. Search for books etc.",
+    title: "Jibu",
+    link: "jibu.vercel.app",
+    address: "https://jibu.vercel.app/",
+    description: "A GPT-3 powered answer engine.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg",
     time: "Coming Soon...",
