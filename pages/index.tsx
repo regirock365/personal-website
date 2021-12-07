@@ -41,16 +41,16 @@ const projects = [
     time: "Coming Soon...",
     soon: true,
   },
-  {
-    title: "Recipe Search",
-    link: "recipes.projectgroceries.com",
-    address: "https://recipes.projectgroceries.com/",
-    description: "An aggregated search engine for recipes",
-    imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
-    time: "Eventually",
-    soon: true,
-  },
+  // {
+  //   title: "Recipe Search",
+  //   link: "recipes.projectgroceries.com",
+  //   address: "https://recipes.projectgroceries.com/",
+  //   description: "An aggregated search engine for recipes",
+  //   imageURL:
+  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
+  //   time: "Eventually",
+  //   soon: true,
+  // },
 ];
 
 interface Props {}
