@@ -65,7 +65,6 @@ const Unsplash: React.FC<Props> = () => {
             ))}
         </div>
       </div>
-      <p>Images will be here... soon</p>
     </section>
   );
 };
