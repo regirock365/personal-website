@@ -35,8 +35,8 @@ const Unsplash: React.FC<Props> = () => {
   return (
     <section className="p-3">
       <h2>Unsplash Favourites</h2>
-      <div className="flex items-center flex-wrap gap-4 mt-3">
-        <div className="flex items-center flex-wrap gap-4">
+      <div className="flex flex-col items-center flex-wrap gap-4 mt-3 xl:flex-row xl:flex-nowrap">
+        <div className="flex-1 flex flex-col items-center gap-4 sm:flex-row">
           {images
             .filter((_, i) => i < 2)
             .map((image, i) => (
@@ -44,13 +44,13 @@ const Unsplash: React.FC<Props> = () => {
                 key={i}
                 href={image.link}
                 target="_blank"
-                className="w-[500px] max-w-full rounded-lg overflow-hidden"
+                className="flex-1 rounded-lg overflow-hidden"
               >
-                <img src={image.url} alt="unsplash" />
+                <img src={image.url} alt={image.description} />
               </a>
             ))}
         </div>
-        <div className="flex items-center flex-wrap gap-4">
+        <div className="flex-1 flex flex-col items-center gap-4 sm:flex-row">
           {images
             .filter((_, i) => i >= 2)
             .map((image, i) => (
@@ -58,7 +58,7 @@ const Unsplash: React.FC<Props> = () => {
                 key={i}
                 href={image.link}
                 target="_blank"
-                className="w-[500px] max-w-full rounded-lg overflow-hidden"
+                className="flex-1 rounded-lg overflow-hidden"
               >
                 <img src={image.url} alt={image.description} />
               </a>
