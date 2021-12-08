@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Unsplash from "../components/Unsplash";
 import { classNames } from "../lib/util";
 
 const projects = [
@@ -169,6 +170,8 @@ const Home: React.FC<Props> = () => {
           </div>
         ))}
       </section>
+
+      <Unsplash />
     </>
   );
 };
