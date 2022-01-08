@@ -1,6 +1,39 @@
 import Head from "next/head";
 import Unsplash from "../components/Unsplash";
 import { classNames } from "../lib/util";
+import {
+  Github,
+  Twitter,
+  Unsplash as UnplashIcon,
+  Instagram,
+} from "@styled-icons/fa-brands";
+
+const webPresence = [
+  {
+    name: "Github",
+    url: "https://github.com/regirock365",
+    username: "regirock365",
+    icon: Github,
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/regirock365",
+    username: "regirock365",
+    icon: Twitter,
+  },
+  {
+    name: "Unsplash",
+    url: "https://unsplash.com/@regirock365",
+    username: "regirock365",
+    icon: UnplashIcon,
+  },
+  {
+    name: "Instagram",
+    url: "https://instagram.com/regirock365",
+    username: "regirock365",
+    icon: Instagram,
+  },
+];
 
 const projects = [
   {
@@ -70,7 +103,7 @@ const Home: React.FC<Props> = () => {
       </div>
       <div className="pb-8 sticky">
         <header className="flex items-center">
-          <div className="p-1 m-2 rounded-full bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500">
+          <div className="p-1 m-3 rounded-full bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500">
             <img
               src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
               alt="Picture of me"
@@ -82,10 +115,21 @@ const Home: React.FC<Props> = () => {
             <span className="text-xl">Web Developer</span>
           </div>
         </header>
-        <section id="online" className="flex items-center p-3 pt-0">
-          <div className="w-32 m-2 h-2" />
-          <div>
-            <div className="text-xl flex items-center gap-2">
+        <section id="online" className="flex items-center p-6 pt-0">
+          <div className="hidden md:block w-32 m-2 h-2" />
+          <div className="flex flex-col md:flex-row">
+            {webPresence.map((presence) => (
+              <a
+                key={presence.name}
+                href={presence.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl flex items-center gap-2 p-2 m-1 bg-white/25 rounded-lg transition hover:bg-white/50"
+              >
+                <presence.icon className="w-5 mr-1" /> {presence.username}
+              </a>
+            ))}
+            {/* <div className="text-xl flex items-center gap-2 p-2 bg-white/25 rounded-lg hover:bg-white/50">
               Github:
               <a
                 href="https://github.com/regirock365"
@@ -124,7 +168,7 @@ const Home: React.FC<Props> = () => {
               >
                 regirock365
               </a>
-            </div>
+            </div> */}
           </div>
         </section>
       </div>
@@ -138,7 +182,7 @@ const Home: React.FC<Props> = () => {
           >
             <div
               className={classNames(
-                "w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center",
+                "w-full h-32 md:w-32 md:h-24 mr-6 rounded-lg shadow-lg bg-cover bg-center",
                 project.soon
                   ? "animate-pulse cursor-wait bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500"
                   : ""

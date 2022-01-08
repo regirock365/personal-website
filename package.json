@@ -23,16 +23,18 @@
   "dependencies": {
     "blurhash": "^1.1.4",
     "fathom-client": "^3.1.0",
-    "next": "^12.0.3",
+    "next": "^12.0.7",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "styled-components": "^5.3.3",
+    "styled-icons": "^10.45.0",
     "swr": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.13",
-    "autoprefixer": "^10.2.6",
-    "postcss": "^8.3.5",
-    "tailwindcss": "^2.2.4",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.12",
     "typescript": "^4.3.5"
   }
 }
