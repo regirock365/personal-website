@@ -142,7 +142,7 @@ const Home: React.FC<Props> = ({ photos }) => {
             <span className="text-xl">Web Developer</span>
           </div>
         </header>
-        <section id="online" className="flex items-center p-3 pt-0 md:p-6">
+        <section id="online" className="flex items-center px-3 pt-0 md:px-3">
           <div className="hidden md:block w-32 m-4 h-4" />
           <div className="flex flex-col md:flex-row">
             {webPresence.map((presence) => (
@@ -160,7 +160,7 @@ const Home: React.FC<Props> = ({ photos }) => {
         </section>
       </div>
 
-      <section className="p-3 pb-16 sticky md:p-6">
+      <section className="p-3 pb-16 sticky md:p-6 md:pb-16">
         <h2 className="mb-3 md:mb-6">Projects</h2>
         <div className="space-y-10 md:space-y-5">
           {projects.map((project) => (

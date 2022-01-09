@@ -8,7 +8,7 @@ interface Props {
 
 const Unsplash: React.FC<Props> = ({ photos }) => {
   return (
-    <section className="p-3 pb-16 md:p-6">
+    <section className="p-3 pb-16 md:p-6 md:pb-16">
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Unsplash Favourites</h2>
         <span className="text-gray-600">
