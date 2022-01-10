@@ -8,6 +8,7 @@ import { GetServerSideProps } from "next";
 import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Unsplash from "../components/Unsplash";
+import Videos from "../components/Videos";
 import { classNames } from "../lib/util";
 
 const unsplash = createApi({
@@ -25,7 +26,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   const response = await unsplash.users.getPhotos({
     username: "regirock365",
     orderBy: OrderBy.POPULAR,
-    perPage: 10,
+    perPage: 6,
   });
 
   const photos = response.response.results;
@@ -161,7 +162,7 @@ const Home: React.FC<Props> = ({ photos }) => {
       </div>
 
       <section className="p-3 pb-16 sticky md:p-6 md:pb-16">
-        <h2 className="mb-3 md:mb-6">Projects</h2>
+        <h2 className="mb-3 md:mb-6">My Work</h2>
         <div className="space-y-10 md:space-y-5">
           {projects.map((project) => (
             <div key={project.title} className="flex flex-col md:flex-row">
@@ -202,6 +203,8 @@ const Home: React.FC<Props> = ({ photos }) => {
       </section>
 
       <Unsplash photos={photos} />
+
+      <Videos />
     </>
   );
 };
