@@ -38,6 +38,7 @@ const Videos: React.FC<Props> = ({}) => {
           <a
             key={video.url}
             href={video.url}
+            target="_blank"
             className="flex flex-col gap-3 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
