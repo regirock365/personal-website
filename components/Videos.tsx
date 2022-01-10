@@ -42,7 +42,7 @@ const Videos: React.FC<Props> = ({}) => {
             className="flex flex-col gap-3 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
-            <div className="relative">
+            <div className="relative shrink-0">
               <img
                 src={video.thumbnail_url}
                 alt={video.title}
@@ -53,7 +53,7 @@ const Videos: React.FC<Props> = ({}) => {
               </small>
             </div>
             <div>
-              <h4>{video.title}</h4>
+              <h4 className="text-xl md:text-2xl">{video.title}</h4>
               <p>{video.description}</p>
             </div>
           </a>
