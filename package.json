@@ -23,7 +23,7 @@
   "dependencies": {
     "blurhash": "^1.1.4",
     "fathom-client": "^3.1.0",
-    "next": "^12.0.7",
+    "next": "^12.0.9",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "styled-components": "^5.3.3",
@@ -32,6 +32,7 @@
     "unsplash-js": "^7.0.15"
   },
   "devDependencies": {
+    "@types/node": "^17.0.13",
     "@types/react": "^17.0.13",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.5",
