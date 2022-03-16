@@ -22,6 +22,27 @@ const video_data = [
     duration: "0:39",
     description: "gilmore girls, 5x12",
   },
+  {
+    title: "Richard and Jared Screaming Excited (Silicon Valley)",
+    url: "https://www.youtube.com/watch?v=gQV8MKGo4CM",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/gQV8MKGo4CM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2i77eIHVyqKylAbbzcdnjWRz4XQ",
+    preview_url:
+      "https://i.ytimg.com/an_webp/gQV8MKGo4CM/mqdefault_6s.webp?du=3000&sqp=CJTyxJEG&rs=AOn4CLBvl4qyaRfYgXq-WlmMA2f44wK3kg",
+    duration: "0:53",
+    description:
+      "Richard and Jared so pumped up and unleash their inner enthusiastic beast! (Silicon Valley) 😂",
+  },
+  {
+    title: `Martin Freeman and Matthew Horne - the "sigh-off"`,
+    url: "https://www.youtube.com/watch?v=4zarpQbhPr0",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/4zarpQbhPr0/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCX22_VgOaWOYJsSjRluAnijUXzQ",
+    preview_url:
+      "https://i.ytimg.com/an_webp/4zarpQbhPr0/mqdefault_6s.webp?du=3000&sqp=CKrVxJEG&rs=AOn4CLDcpsOfeAHG1Zfegt-7_cUyNum5dQ",
+    duration: "0:47",
+    description: "Two TV comedy legends head to head",
+  },
 ];
 
 const Videos: React.FC<Props> = ({}) => {
