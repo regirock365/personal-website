@@ -95,16 +95,16 @@ const projects = [
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
     time: "2021",
   },
-  {
-    title: "Jibu",
-    link: "jibu.vercel.app",
-    address: "https://jibu.vercel.app/",
-    description: "A GPT-3 powered answer engine.",
-    imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg",
-    time: "Coming Soon...",
-    soon: true,
-  },
+  // {
+  //   title: "Jibu",
+  //   link: "jibu.vercel.app",
+  //   address: "https://jibu.vercel.app/",
+  //   description: "A GPT-3 powered answer engine.",
+  //   imageURL:
+  //     "https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg",
+  //   time: "Coming Soon...",
+  //   soon: true,
+  // },
   // {
   //   title: "Recipe Search",
   //   link: "recipes.projectgroceries.com",
