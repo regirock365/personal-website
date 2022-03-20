@@ -94,6 +94,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
     time: "2021",
+    soon: false,
   },
   // {
   //   title: "Jibu",
