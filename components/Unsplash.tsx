@@ -15,7 +15,7 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
           <Hand className="w-4" /> Scroll horizontally to see all images
         </span>
       </div>
-      <div className="relative w-full flex gap-8 pb-3 snap-x overflow-x-auto md:pb-6">
+      <div className="relative w-full flex gap-8 pb-3 snap-x overflow-x-auto md:pb-6 max-w-7xl">
         {shuffle(photos).map((photo) => (
           <a
             key={photo.id}
