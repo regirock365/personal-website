@@ -2,12 +2,22 @@ interface Props {}
 
 const video_data = [
   {
+    title: "Hexagons are the Bestagons",
+    url: "https://www.youtube.com/watch?v=thOifuHs6eY",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/thOifuHs6eY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB3lLjyVDtpjCDYtXno120GH-pFfQ",
+    preview_url:
+      "https://i.ytimg.com/an_webp/thOifuHs6eY/mqdefault_6s.webp?du=3000&sqp=CKCM3pIG&rs=AOn4CLB-0KhI6sYeWA-tWr924Rc1kfMdbQ",
+    duration: "9:27",
+    description: "",
+  },
+  {
     title: "Luke Cage Saves Method Man and Shop Owner Part One",
     url: "https://www.youtube.com/watch?v=x_t6go-947o",
     thumbnail_url:
       "https://i.ytimg.com/vi/x_t6go-947o/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8tojMZAZluhcdGXDmk8NKDTfZpA",
     preview_url:
-      "https://i.ytimg.com/an_webp/x_t6go-947o/mqdefault_6s.webp?du=3000&sqp=CIjm744G&rs=AOn4CLC8xgUrkDasY83WHv2EB2sc2W14Vw",
+      "https://i.ytimg.com/an_webp/x_t6go-947o/mqdefault_6s.webp?du=3000&sqp=CO6G3pIG&rs=AOn4CLA1roQjOV9sj0lxp_EOzQzBKSLfbA",
     duration: "2:26",
     description:
       "Luke Cage Saves Method Man and  Shop Owner Part One.\nJust love Luke Cage and a huge fan of Method Man",
@@ -28,7 +38,7 @@ const video_data = [
     thumbnail_url:
       "https://i.ytimg.com/vi/gQV8MKGo4CM/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB2i77eIHVyqKylAbbzcdnjWRz4XQ",
     preview_url:
-      "https://i.ytimg.com/an_webp/gQV8MKGo4CM/mqdefault_6s.webp?du=3000&sqp=CJTyxJEG&rs=AOn4CLBvl4qyaRfYgXq-WlmMA2f44wK3kg",
+      "https://i.ytimg.com/an_webp/gQV8MKGo4CM/mqdefault_6s.webp?du=3000&sqp=CJmT3pIG&rs=AOn4CLDw_dmPkRDnLfpldj5AZKG1Rraxnw",
     duration: "0:53",
     description:
       "Richard and Jared so pumped up and unleash their inner enthusiastic beast! (Silicon Valley) 😂",
@@ -39,7 +49,7 @@ const video_data = [
     thumbnail_url:
       "https://i.ytimg.com/vi/4zarpQbhPr0/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBCX22_VgOaWOYJsSjRluAnijUXzQ",
     preview_url:
-      "https://i.ytimg.com/an_webp/4zarpQbhPr0/mqdefault_6s.webp?du=3000&sqp=CKrVxJEG&rs=AOn4CLDcpsOfeAHG1Zfegt-7_cUyNum5dQ",
+      "https://i.ytimg.com/an_webp/4zarpQbhPr0/mqdefault_6s.webp?du=3000&sqp=COLe3ZIG&rs=AOn4CLCge6n5Chbrz5za7UPbBJ_FfA-P0w",
     duration: "0:47",
     description: "Two TV comedy legends head to head",
   },
@@ -54,7 +64,10 @@ const Videos: React.FC<Props> = ({}) => {
           <Hand className="w-4" /> Scroll horizontally to see all images
         </span> */}
       </div>
-      <div className="pb-3 space-y-8">
+      <div
+        className="pb-3 space-y-4 block xl:gridfff xl:space-y-0sda gap-3 max-w-7xl"
+        style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
+      >
         {video_data.map((video) => (
           <a
             key={video.url}
@@ -63,11 +76,16 @@ const Videos: React.FC<Props> = ({}) => {
             className="flex flex-col gap-3 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
-            <div className="relative shrink-0">
+            <div className="relative shrink-0 group">
               <img
                 src={video.thumbnail_url}
                 alt={video.title}
                 className="w-full rounded md:w-56"
+              />
+              <img
+                src={video.preview_url}
+                alt={video.title}
+                className="w-full rounded md:w-56 absolute inset-0 opacity-0 group-hover:opacity-100"
               />
               <small className="absolute bottom-0 right-0 mb-2 mr-2 p-1 bg-black/75 text-white">
                 {video.duration}
