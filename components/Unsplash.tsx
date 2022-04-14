@@ -1,6 +1,6 @@
 import { Hand } from "styled-icons/heroicons-solid";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
-import { shuffle } from "../lib/util";
+import { classNames, shuffle } from "../lib/util";
 
 interface Props {
   photos: Basic[];
@@ -15,21 +15,33 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
           <Hand className="w-4" /> Scroll horizontally to see all images
         </span>
       </div>
-      <div className="relative w-full flex gap-8 pb-3 snap-x overflow-x-auto md:pb-6 max-w-7xl">
-        {shuffle(photos).map((photo) => (
-          <a
-            key={photo.id}
-            href={photo.links.html}
-            target="_blank"
-            className="relative snap-center shrink-0 rounded-lg overflow-x-hidden group"
-          >
-            <img
-              src={photo.urls.small}
-              alt={photo.description}
-              className="h-52 md:h-80"
+      <div className="pb-3 md:pb-6">
+        <div className="relative max-w-7xl overflow-hidden">
+          <div className="w-full flex gap-8 snap-x overflow-x-auto">
+            <div
+              className="absolute left-0 top-0 h-full bg-black/10 transition opacity-100 z-10"
+              style={{ width: "1px", boxShadow: "2px 0px 30px 4px black" }}
             />
-          </a>
-        ))}
+            <div
+              className="absolute right-0 top-0 h-full bg-black/10 transition opacity-100 z-10"
+              style={{ width: "1px", boxShadow: "-2px 0px 30px 4px black" }}
+            />
+            {shuffle(photos).map((photo) => (
+              <a
+                key={photo.id}
+                href={photo.links.html}
+                target="_blank"
+                className="relative snap-center shrink-0 rounded-lg overflow-x-hidden group"
+              >
+                <img
+                  src={photo.urls.small}
+                  alt={photo.description}
+                  className="h-52 md:h-80"
+                />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
