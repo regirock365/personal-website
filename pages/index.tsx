@@ -144,9 +144,9 @@ const Home: React.FC<Props> = ({ photos }) => {
             <span className="text-xl">Web Developer</span>
           </div>
         </header>
-        <section id="online" className="flex items-center px-3 pt-0 md:px-3">
-          <div className="hidden md:block w-32 m-4 h-4" />
-          <div className="flex flex-col md:flex-row">
+        <section id="online" className="flex items-center px-3 pt-0 md:px-0">
+          <div className="hidden md:block w-24 h-4 p-1 m-3 md:w-32 md:m-6" />
+          <div className="flex flex-col md:flex-row ml-3 md:ml-6">
             {webPresence.map((presence) => (
               <a
                 key={presence.name}
