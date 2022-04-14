@@ -82,11 +82,11 @@ const Videos: React.FC<Props> = ({}) => {
                 alt={video.title}
                 className="w-full rounded md:w-56"
               />
-              <img
+              {/* <img
                 src={video.preview_url}
                 alt={video.title}
                 className="w-full rounded md:w-56 absolute inset-0 opacity-0 group-hover:opacity-100"
-              />
+              /> */}
               <small className="absolute bottom-0 right-0 mb-2 mr-2 p-1 bg-black/75 text-white">
                 {video.duration}
               </small>
