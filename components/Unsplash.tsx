@@ -16,7 +16,7 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
         </span>
       </div>
       <div className="pb-3 md:pb-6">
-        <div className="relative max-w-7xl overflow-hidden">
+        <div className="relative max-w-7xl overflow-hidden rounded-lg">
           <div className="w-full flex gap-8 snap-x overflow-x-auto">
             <div
               className="absolute left-0 top-0 h-full bg-black/10 transition opacity-100 z-10"
