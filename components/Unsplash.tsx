@@ -15,7 +15,9 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
           <Hand className="w-4" /> Scroll horizontally to see all images
         </span>
       </div>
-      <div className="pb-3 md:pb-6">
+      <div className="relative max-w-7xl pb-3 md:pb-6">
+        <div className="absolute top-0 left-1/2 h-[120%] w-0 -translate-y-[10%] rounded-md border-2 border-solid border-gray-600/50 dark:border-slate-500/50" />
+
         <div className="relative max-w-7xl overflow-hidden rounded-lg">
           <div className="flex w-full snap-x gap-8 overflow-x-auto">
             <div
@@ -26,6 +28,8 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
               className="absolute right-0 top-0 z-10 h-full bg-black/10 opacity-100 transition"
               style={{ width: "1px", boxShadow: "-2px 0px 30px 4px black" }}
             />
+
+            <div className="z-10 h-52 w-[40%] shrink-0 bg-white px-20 dark:bg-slate-900 md:h-80" />
             {shuffle(photos).map((photo) => (
               <a
                 key={photo.id}
@@ -40,6 +44,7 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
                 />
               </a>
             ))}
+            <div className="z-10 h-52 w-[40%] shrink-0 bg-white px-20 dark:bg-slate-900 md:h-80" />
           </div>
         </div>
       </div>
