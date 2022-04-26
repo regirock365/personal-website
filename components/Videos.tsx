@@ -65,7 +65,7 @@ const Videos: React.FC<Props> = ({}) => {
         </span> */}
       </div>
       <div
-        className="pb-3 space-y-4 block xl:gridfff xl:space-y-0sda gap-3 max-w-7xl"
+        className="xl:gridfff xl:space-y-0sda block max-w-7xl gap-3 space-y-4 pb-3"
         style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
       >
         {video_data.map((video) => (
@@ -73,10 +73,10 @@ const Videos: React.FC<Props> = ({}) => {
             key={video.url}
             href={video.url}
             target="_blank"
-            className="flex flex-col gap-3 md:flex-row"
+            className="flex flex-col gap-3 rounded-md p-2 hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
-            <div className="relative shrink-0 group">
+            <div className="group relative shrink-0">
               <img
                 src={video.thumbnail_url}
                 alt={video.title}
@@ -87,7 +87,7 @@ const Videos: React.FC<Props> = ({}) => {
                 alt={video.title}
                 className="w-full rounded md:w-56 absolute inset-0 opacity-0 group-hover:opacity-100"
               /> */}
-              <small className="absolute bottom-0 right-0 mb-2 mr-2 p-1 bg-black/75 text-white">
+              <small className="absolute bottom-0 right-0 mb-2 mr-2 bg-black/75 p-1 text-white">
                 {video.duration}
               </small>
             </div>

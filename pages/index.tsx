@@ -122,56 +122,58 @@ const Home: React.FC<Props> = ({ photos }) => {
   return (
     <>
       <div
-        className="bg-cover bg-top absolute"
+        className="absolute bg-cover bg-top"
         style={{
           backgroundImage:
             "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
         }}
       >
-        <div className="h-[500px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur" />
+        <div className="h-[500px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur dark:from-slate-900/25 dark:to-slate-900" />
       </div>
-      <div className="pb-16 sticky">
+      <div className="sticky pb-16">
         <header className="flex items-center">
-          <div className="p-1 m-3 rounded-full bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500 md:m-6">
+          <div className="to m-3 rounded-full bg-red-500 bg-gradient-to-tr from-yellow-500 via-amber-500 p-1 md:m-6">
             <img
               src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
               alt="Picture of me"
-              className="w-24 h-24 rounded-full shadow-lg md:w-32 md:h-32"
+              className="h-24 w-24 rounded-full shadow-lg md:h-32 md:w-32"
             />
           </div>
           <div className="ml-3 md:ml-6">
             <h1>regirock365</h1>
-            <span className="text-xl">Web Developer</span>
+            <span className="text-xl text-gray-800 dark:text-slate-100">
+              Web Developer
+            </span>
           </div>
         </header>
         <section id="online" className="flex items-center px-3 pt-0 md:px-0">
-          <div className="hidden md:block w-24 h-4 p-1 m-3 md:w-32 md:m-6" />
-          <div className="flex flex-col md:flex-row ml-3 md:ml-6">
+          <div className="m-3 hidden h-4 w-24 p-1 md:m-6 md:block md:w-32" />
+          <div className="ml-3 flex flex-col md:ml-6 md:flex-row">
             {webPresence.map((presence) => (
               <a
                 key={presence.name}
                 href={presence.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-xl flex items-center gap-2 p-2 m-1 bg-white/25 rounded-lg transition hover:bg-white/50"
+                className="m-1 flex items-center gap-2 rounded-lg bg-white/25 p-2 text-xl transition hover:bg-white/50 dark:bg-white/40 dark:text-slate-900 dark:hover:bg-white/60"
               >
-                <presence.icon className="w-5 mr-1" /> {presence.username}
+                <presence.icon className="mr-1 w-5" /> {presence.username}
               </a>
             ))}
           </div>
         </section>
       </div>
 
-      <section className="p-3 pb-16 sticky md:p-6 md:pb-16">
+      <section className="sticky p-3 pb-16 md:p-6 md:pb-16">
         <h2 className="mb-3 md:mb-6">My Work</h2>
         <div className="space-y-10 md:space-y-5">
           {projects.map((project) => (
             <div key={project.title} className="flex flex-col md:flex-row">
               <div
                 className={classNames(
-                  "w-full h-32 md:w-32 md:h-24 mr-3 rounded-lg shadow-lg bg-cover bg-center md:mr-6",
+                  "mr-3 h-32 w-full rounded-lg bg-cover bg-center shadow-lg md:mr-6 md:h-24 md:w-32",
                   project.soon
-                    ? "animate-pulse cursor-wait bg-gradient-to-tr from-yellow-500 via-amber-500 to bg-red-500"
+                    ? "to animate-pulse cursor-wait bg-red-500 bg-gradient-to-tr from-yellow-500 via-amber-500"
                     : ""
                 )}
                 style={
@@ -189,12 +191,14 @@ const Home: React.FC<Props> = ({ photos }) => {
                     href={project.address}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-600 active:text-blue-800"
+                    className="text-blue-500 hover:text-blue-600 active:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 dark:active:text-blue-700"
                   >
                     {project.link}
                   </a>
-                  <span className="w-5 border border-gray-400"></span>
-                  <span className="text-gray-600">{project.time}</span>
+                  <span className="w-5 border border-gray-400 dark:border-gray-500"></span>
+                  <span className="text-gray-600 dark:text-slate-300">
+                    {project.time}
+                  </span>
                 </div>
                 <p className="max-w-xl">{project.description}</p>
               </div>
