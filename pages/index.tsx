@@ -1,3 +1,4 @@
+import { Menu, Transition } from "@headlessui/react";
 import {
   Github,
   Instagram,
@@ -5,10 +6,13 @@ import {
   Unsplash as UnplashIcon,
 } from "@styled-icons/fa-brands";
 import { GetServerSideProps } from "next";
+import { useEffect } from "react";
+import { DesktopComputer, Moon, Sun } from "styled-icons/heroicons-solid";
 import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Unsplash from "../components/Unsplash";
 import Videos from "../components/Videos";
+import useLocalStorageState from "../hooks/useLocalStorageState";
 import { classNames } from "../lib/util";
 
 const unsplash = createApi({
@@ -119,8 +123,135 @@ const projects = [
 ];
 
 const Home: React.FC<Props> = ({ photos }) => {
+  const [theme, setTheme] = useLocalStorageState("theme", "system");
+
+  useEffect(() => {
+    if (
+      theme === "dark" ||
+      (theme === "system" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+
+    // // Whenever the user explicitly chooses light mode
+    // localStorage.theme = "light";
+
+    // // Whenever the user explicitly chooses dark mode
+    // localStorage.theme = "dark";
+
+    // // Whenever the user explicitly chooses to respect the OS preference
+    // localStorage.removeItem("theme");
+  }, [theme]);
+
   return (
     <>
+      <div className="fixed top-8 right-8 z-10">
+        <Menu>
+          <Menu.Button className="rounded-md bg-gray-100/50 p-2 text-gray-900 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-800/75">
+            More
+          </Menu.Button>
+          <Transition
+            enter="transition duration-100 ease-out"
+            enterFrom="transform scale-95 opacity-0"
+            enterTo="transform scale-100 opacity-100"
+            leave="transition duration-75 ease-out"
+            leaveFrom="transform scale-100 opacity-100"
+            leaveTo="transform scale-95 opacity-0"
+          >
+            <Menu.Items className="absolute top-2 right-0 flex w-max max-w-md flex-col gap-1 rounded-md bg-gray-100 p-2 text-black dark:bg-slate-800 dark:text-slate-50">
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={classNames(
+                      "flex items-center gap-2 rounded-md p-2 md:pr-12",
+                      active ? "bg-gray-200 dark:bg-slate-700" : "",
+                      theme === "light" ? "text-sky-500" : ""
+                    )}
+                    onClick={() => {
+                      setTheme("light");
+                    }}
+                  >
+                    <Sun
+                      className={classNames(
+                        "w-6 text-gray-500 dark:text-slate-400",
+                        theme === "light"
+                          ? "text-sky-600 dark:text-sky-600"
+                          : ""
+                      )}
+                    />
+                    Light
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={classNames(
+                      "flex items-center gap-2 rounded-md p-2 md:pr-12",
+                      active ? "bg-gray-200 dark:bg-slate-700" : "",
+                      theme === "dark" ? "text-sky-500" : ""
+                    )}
+                    onClick={() => {
+                      setTheme("dark");
+                    }}
+                  >
+                    <Moon
+                      className={classNames(
+                        "w-6 text-gray-500 dark:text-slate-400",
+                        theme === "dark" ? "text-sky-600 dark:text-sky-600" : ""
+                      )}
+                    />
+                    Dark
+                  </button>
+                )}
+              </Menu.Item>
+              <Menu.Item>
+                {({ active }) => (
+                  <button
+                    className={classNames(
+                      "flex items-center gap-2 rounded-md p-2 md:pr-12",
+                      active ? "bg-gray-200 dark:bg-slate-700" : "",
+                      theme === "system" ? "text-sky-500" : ""
+                    )}
+                    onClick={() => {
+                      setTheme("system");
+                    }}
+                  >
+                    <DesktopComputer
+                      className={classNames(
+                        "w-6 text-gray-500 dark:text-slate-400",
+                        theme === "system"
+                          ? "text-sky-600 dark:text-sky-600"
+                          : ""
+                      )}
+                    />
+                    System
+                  </button>
+                )}
+              </Menu.Item>
+              {/* <Menu.Item>
+                {({ active }) => (
+                  <a
+                    // className={`${active && "bg-blue-500"}`}
+                    href="/account-settings"
+                  >
+                    Documentation
+                  </a>
+                )}
+              </Menu.Item>
+              <Menu.Item disabled>
+                <span className="opacity-75">
+                  Invite a friend (coming soon!)
+                </span>
+              </Menu.Item> */}
+            </Menu.Items>
+          </Transition>
+        </Menu>
+      </div>
+
       <div
         className="absolute bg-cover bg-top"
         style={{
@@ -147,8 +278,8 @@ const Home: React.FC<Props> = ({ photos }) => {
           </div>
         </header>
         <section id="online" className="flex items-center px-3 pt-0 md:px-0">
-          <div className="m-3 hidden h-4 w-24 p-1 md:m-6 md:block md:w-32" />
-          <div className="ml-3 flex flex-col md:ml-6 md:flex-row">
+          <div className="m-3 block h-4 w-24 p-1 md:m-6 md:block md:w-32" />
+          <div className="ml-0 flex flex-col md:ml-6 md:flex-row">
             {webPresence.map((presence) => (
               <a
                 key={presence.name}

@@ -73,7 +73,7 @@ const Videos: React.FC<Props> = ({}) => {
             key={video.url}
             href={video.url}
             target="_blank"
-            className="flex flex-col gap-3 rounded-md p-2 hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
+            className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
             <div className="group relative shrink-0">
