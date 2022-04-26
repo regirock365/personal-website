@@ -151,7 +151,7 @@ const Home: React.FC<Props> = ({ photos }) => {
       <div className="fixed top-8 right-8 z-10">
         <Menu>
           <Menu.Button className="rounded-md bg-gray-100/50 p-2 text-gray-900 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-800/75">
-            More
+            <Sun className="w-6 text-gray-800 dark:text-slate-100" />
           </Menu.Button>
           <Transition
             enter="transition duration-100 ease-out"
