@@ -259,7 +259,7 @@ const Home: React.FC<Props> = ({ photos }) => {
             "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
         }}
       >
-        <div className="h-[500px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur transition dark:from-slate-900/25 dark:to-slate-900" />
+        <div className="h-[500px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur dark:from-slate-900/25 dark:to-slate-900" />
       </div>
       <div className="sticky pb-16">
         <header className="flex items-center">

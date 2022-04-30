@@ -3,7 +3,7 @@
 @tailwind components;
 
 body {
-  @apply transition dark:bg-slate-900;
+  @apply dark:bg-slate-900;
 }
 
 h1 {
