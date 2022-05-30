@@ -278,8 +278,8 @@ const Home: React.FC<Props> = ({ photos }) => {
           </div>
         </header>
         <section id="online" className="flex items-center px-3 pt-0 md:px-0">
-          <div className="m-3 block h-4 w-24 p-1 md:m-6 md:block md:w-32" />
-          <div className="ml-0 flex flex-col md:ml-6 md:flex-row">
+          <div className="m-3 hidden h-4 w-24 p-1 md:m-6 md:block md:w-32" />
+          <div className="ml-0 flex flex-wrap md:ml-6 md:flex-row">
             {webPresence.map((presence) => (
               <a
                 key={presence.name}
