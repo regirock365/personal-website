@@ -77,7 +77,7 @@ const projects = [
     description:
       "A website designed for home economics teachers to make the job of food ordering easier and more streamlined.",
     imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1599364438/Project_Groceries_Card_Image_jjm3gs.png",
+      "https://res.cloudinary.com/projectgroceries/image/upload/v1655107303/ClassCart_Card_Image_gmi5v9.png",
     time: "2015",
   },
   {
