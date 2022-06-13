@@ -71,9 +71,9 @@ const webPresence = [
 
 const projects = [
   {
-    title: "Project Groceries",
-    link: "projectgroceries.com",
-    address: "https://projectgroceries.com/",
+    title: "ClassCart",
+    link: "class-cart.com",
+    address: "https://class-cart.com/",
     description:
       "A website designed for home economics teachers to make the job of food ordering easier and more streamlined.",
     imageURL:
