@@ -82,11 +82,11 @@ const projects = [
   },
   {
     title: "Convert",
-    link: "convert.projectgroceries.com",
-    address: "https://convert.projectgroceries.com/",
+    link: "convert.class-cart.com",
+    address: "https://convert.class-cart.com/",
     description: "A conversion tool for common ingredient measurements.",
     imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1601877136/Convert_Meta_Image_xzs3x2.png",
+      "https://res.cloudinary.com/projectgroceries/image/upload/v1601877136/Convert_Meta_Image_siit36.png",
     time: "2020",
   },
   {
