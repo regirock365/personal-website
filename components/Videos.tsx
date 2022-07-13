@@ -53,6 +53,17 @@ const video_data = [
     duration: "0:47",
     description: "Two TV comedy legends head to head",
   },
+  {
+    title: "The Riddle That Seems Impossible Even If You Know The Answer",
+    url: "https://www.youtube.com/watch?v=iSNsgj1OCLA",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/iSNsgj1OCLA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDTCzTes5nhCdf5ZeFE15z1eydO4Q",
+    preview_url:
+      "https://i.ytimg.com/an_webp/iSNsgj1OCLA/mqdefault_6s.webp?du=3000&sqp=CIDHuZYG&rs=AOn4CLB9VEAzWVDZX-ZV4GnQmwfG3k2o5Q",
+    duration: "17:45",
+    description:
+      "The 100 Prisoners Riddle feels completely impossible even once you know the answer.",
+  },
 ];
 
 const Videos: React.FC<Props> = ({}) => {
