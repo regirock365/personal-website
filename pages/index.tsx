@@ -6,10 +6,11 @@ import {
   Unsplash as UnplashIcon,
 } from "@styled-icons/fa-brands";
 import { GetServerSideProps } from "next";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { DesktopComputer, Moon, Sun } from "styled-icons/heroicons-solid";
 import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
+import Credits from "../components/Credits";
 import Unsplash from "../components/Unsplash";
 import Videos from "../components/Videos";
 import useLocalStorageState from "../hooks/useLocalStorageState";
@@ -123,6 +124,8 @@ const projects = [
 ];
 
 const Home: React.FC<Props> = ({ photos }) => {
+  const [showLight, setShowLight] = useState(false);
+  const [lightOn, setLightOn] = useState(false);
   const [theme, setTheme] = useLocalStorageState("theme", "system");
 
   useEffect(() => {
@@ -132,8 +135,10 @@ const Home: React.FC<Props> = ({ photos }) => {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
+      setShowLight(true);
     } else {
       document.documentElement.classList.remove("dark");
+      setShowLight(false);
     }
 
     // // Whenever the user explicitly chooses light mode
@@ -148,7 +153,29 @@ const Home: React.FC<Props> = ({ photos }) => {
 
   return (
     <>
-      <div className="fixed top-2 right-2 z-10 sm:top-3 sm:right-3 md:top-8 md:right-8">
+      <div className={classNames("area transition", showLight ? "" : "hide")}>
+        <div className="wire"></div>
+        <div className="fixture">
+          <div className="strip"></div>
+          <div className="strip"></div>
+          <div className="strip"></div>
+        </div>
+        <div
+          className={classNames(
+            "bulb cursor-pointer transition",
+            showLight && lightOn ? "light" : ""
+          )}
+          onClick={() => {
+            setLightOn(!lightOn);
+          }}
+        >
+          <div className="zig"></div>
+          <div className="zig"></div>
+          <div className="zig"></div>
+        </div>
+      </div>
+
+      <div className="fixed top-2 right-2 z-20 sm:top-3 sm:right-3 md:top-8 md:right-8">
         <Menu>
           <Menu.Button className="rounded-md bg-gray-100/50 p-2 text-gray-900 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-800/75">
             <Sun className="w-6 text-gray-800 dark:text-slate-100" />
@@ -338,9 +365,17 @@ const Home: React.FC<Props> = ({ photos }) => {
         </div>
       </section>
 
-      <Unsplash photos={photos} />
+      <Unsplash photos={photos} key="og" />
 
       <Videos />
+
+      <Credits
+        isDarkMode={
+          theme === "dark" ||
+          (theme === "system" &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        }
+      />
     </>
   );
 };

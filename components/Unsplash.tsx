@@ -7,6 +7,8 @@ interface Props {
 }
 
 const Unsplash: React.FC<Props> = ({ photos }) => {
+  const shuffledPhotos = shuffle(photos);
+
   return (
     <section className="p-3 pb-16 md:p-6 md:pb-16">
       <div className="mb-3 md:mb-6">
@@ -30,7 +32,7 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
             />
 
             <div className="z-10 h-52 w-[40%] shrink-0 bg-white px-20 dark:bg-slate-900 md:h-80" />
-            {shuffle(photos).map((photo) => (
+            {shuffledPhotos.map((photo) => (
               <a
                 key={photo.id}
                 href={photo.links.html}
