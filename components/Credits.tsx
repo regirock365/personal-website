@@ -1,8 +1,24 @@
+import { useEffect, useState } from "react";
+
 interface Props {
-  isDarkMode: boolean;
+  theme: string;
 }
 
-const Credits: React.FC<Props> = ({ isDarkMode }) => {
+const Credits: React.FC<Props> = ({ theme }) => {
+  const [isDarkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (
+      theme === "dark" ||
+      (theme === "system" &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setDarkMode(true);
+    } else {
+      setDarkMode(false);
+    }
+  }, [theme]);
+
   return (
     <section className="p-3 pb-16 md:p-6 md:pb-16">
       <div className="mb-3 md:mb-6">

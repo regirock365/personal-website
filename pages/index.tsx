@@ -374,13 +374,7 @@ const Home: React.FC<Props> = ({ photos }) => {
 
       <Videos />
 
-      <Credits
-        isDarkMode={
-          theme === "dark" ||
-          (theme === "system" &&
-            window.matchMedia("(prefers-color-scheme: dark)").matches)
-        }
-      />
+      <Credits theme={theme} />
     </>
   );
 };
