@@ -31,7 +31,13 @@ const Credits: React.FC<Props> = ({ isDarkMode }) => {
           >
             Joe Bocock
           </a>
-          .{isDarkMode ? null : <span> Toggle dark mode to see it.</span>}
+          .
+          {isDarkMode ? null : (
+            <span className="hidden md:inline">
+              {" "}
+              Toggle dark mode to see it.
+            </span>
+          )}
         </p>
       </div>
     </section>

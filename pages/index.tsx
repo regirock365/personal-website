@@ -153,7 +153,12 @@ const Home: React.FC<Props> = ({ photos }) => {
 
   return (
     <>
-      <div className={classNames("area transition", showLight ? "" : "hide")}>
+      <div
+        className={classNames(
+          "area hidden transition md:block",
+          showLight ? "" : "hide"
+        )}
+      >
         <div className="wire"></div>
         <div className="fixture">
           <div className="strip"></div>
