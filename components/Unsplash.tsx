@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { Hand } from "styled-icons/heroicons-solid";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import { classNames, shuffle } from "../lib/util";
@@ -7,7 +8,7 @@ interface Props {
 }
 
 const Unsplash: React.FC<Props> = ({ photos }) => {
-  const shuffledPhotos = shuffle(photos);
+  const shuffledPhotos = useMemo(() => shuffle(photos), []);
 
   return (
     <section className="p-3 pb-16 md:p-6 md:pb-16">
