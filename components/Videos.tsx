@@ -64,6 +64,17 @@ const video_data = [
     description:
       "The 100 Prisoners Riddle feels completely impossible even once you know the answer.",
   },
+  {
+    title: "Breaking Bad Season 2: Episode 7: Mexican song",
+    url: "https://www.youtube.com/watch?v=_Stn0dsEayA",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/_Stn0dsEayA/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQGasl1v7V2zkJ1dxlf4fjZD1bTw",
+    preview_url:
+      "https://i.ytimg.com/an_webp/_Stn0dsEayA/mqdefault_6s.webp?du=3000&sqp=CMCFspcG&rs=AOn4CLBtz5LH4iPv0zvFjWF_o7hvKXO0LQ",
+    duration: "3:22",
+    description:
+      'What’s happening in this Breaking Bad clip?\nThe episode opens with the band Los Cuates de Sinaloa performing a song called "Negro y Azul" ("Black and Blue"), which is about how a gringo boss named Heisenberg is disrespecting the Mexican drug cartel by cornering the Albuquerque market with high-quality blue crystal methamphetamine.',
+  },
 ];
 
 const Videos: React.FC<Props> = ({}) => {
@@ -71,9 +82,7 @@ const Videos: React.FC<Props> = ({}) => {
     <section className="p-3 pb-16 md:p-6 md:pb-16">
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Videos I Like</h2>
-        {/* <span className="text-gray-600">
-          <Hand className="w-4" /> Scroll horizontally to see all images
-        </span> */}
+        <span className="text-gray-600">In no particular order.</span>
       </div>
       <div
         className="xl:gridfff xl:space-y-0sda block max-w-7xl gap-3 space-y-4 pb-3"
@@ -87,7 +96,7 @@ const Videos: React.FC<Props> = ({}) => {
             className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
-            <div className="group relative shrink-0">
+            <div className="group relative h-min shrink-0">
               <img
                 src={video.thumbnail_url}
                 alt={video.title}
@@ -103,7 +112,9 @@ const Videos: React.FC<Props> = ({}) => {
               </small>
             </div>
             <div>
-              <h4 className="text-xl md:text-2xl">{video.title}</h4>
+              <h4 className="mb-1 text-xl md:mb-0 md:text-2xl">
+                {video.title}
+              </h4>
               <p>{video.description}</p>
             </div>
           </a>
