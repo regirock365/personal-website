@@ -116,7 +116,6 @@ const projects = [
     description: "Search for recipes across many sites at once.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1663414068/Recipe_Search_Card_Image_nvyerh.png",
-    // "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
     time: "2022",
     soon: false,
   },
