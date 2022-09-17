@@ -75,6 +75,16 @@ const video_data = [
     description:
       'What’s happening in this Breaking Bad clip?\nThe episode opens with the band Los Cuates de Sinaloa performing a song called "Negro y Azul" ("Black and Blue"), which is about how a gringo boss named Heisenberg is disrespecting the Mexican drug cartel by cornering the Albuquerque market with high-quality blue crystal methamphetamine.',
   },
+  {
+    title: 'Jay Z "God Did" Reaction + Breakdown With Young Guru',
+    url: "https://www.youtube.com/watch?v=NEadoEGgcHk",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/NEadoEGgcHk/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxnPJ3ntWmF0lM4rGuX4-cdLTURw",
+    preview_url:
+      "https://i.ytimg.com/an_webp/NEadoEGgcHk/mqdefault_6s.webp?du=3000&sqp=CKanlpkG&rs=AOn4CLCs8M0Q1_Qo3VKyWUEY2hZwBJdGuw",
+    duration: "39:30",
+    description: "",
+  },
 ];
 
 const Videos: React.FC<Props> = ({}) => {
