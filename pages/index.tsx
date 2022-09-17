@@ -75,8 +75,7 @@ const projects = [
     title: "ClassCart",
     link: "class-cart.com",
     address: "https://class-cart.com/",
-    description:
-      "A website designed for home economics teachers to make the job of food ordering easier and more streamlined.",
+    description: "Save time while managing food orders.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1655107303/ClassCart_Card_Image_gmi5v9.png",
     time: "2015",
@@ -94,8 +93,7 @@ const projects = [
     title: "Recipe Generator",
     link: "recipegenerator.ai",
     address: "https://recipegenerator.ai/",
-    description:
-      "Type in what you're looking for and get an AI generated recipe!",
+    description: "GPT-3 generated recipe ideas!",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
     time: "2021",
@@ -111,16 +109,17 @@ const projects = [
   //   time: "Coming Soon...",
   //   soon: true,
   // },
-  // {
-  //   title: "Recipe Search",
-  //   link: "recipes.projectgroceries.com",
-  //   address: "https://recipes.projectgroceries.com/",
-  //   description: "An aggregated search engine for recipes",
-  //   imageURL:
-  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
-  //   time: "Eventually",
-  //   soon: true,
-  // },
+  {
+    title: "Recipe Search",
+    link: "recipes.projectgroceries.com",
+    address: "https://recipe-search-delta.vercel.app/",
+    description: "Search for recipes across many sites at once.",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1663414068/Recipe_Search_Card_Image_nvyerh.png",
+    // "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1602072563/Recipe_Search_Meta_Image_ryb6d4.png",
+    time: "2022",
+    soon: false,
+  },
 ];
 
 const Home: React.FC<Props> = ({ photos }) => {
