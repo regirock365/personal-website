@@ -111,7 +111,7 @@ const projects = [
   // },
   {
     title: "Recipe Search",
-    link: "recipes.projectgroceries.com",
+    link: "recipe-search-delta.vercel.app",
     address: "https://recipe-search-delta.vercel.app/",
     description: "Search for recipes across many sites at once.",
     imageURL:
