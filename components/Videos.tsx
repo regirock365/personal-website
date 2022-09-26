@@ -93,7 +93,7 @@ const Videos: React.FC<Props> = ({}) => {
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Videos I Like</h2>
         <span className="text-gray-600 dark:text-slate-300">
-          In no particular order.
+          In no particular order
         </span>
       </div>
       <div

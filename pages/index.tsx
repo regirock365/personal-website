@@ -11,6 +11,7 @@ import { DesktopComputer, Moon, Sun } from "styled-icons/heroicons-solid";
 import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Credits from "../components/Credits";
+import FlexZone from "../components/FlexZone";
 import Unsplash from "../components/Unsplash";
 import Videos from "../components/Videos";
 import useLocalStorageState from "../hooks/useLocalStorageState";
@@ -371,6 +372,8 @@ const Home: React.FC<Props> = ({ photos }) => {
       <Unsplash photos={photos} key="og" />
 
       <Videos />
+
+      {/* <FlexZone /> */}
 
       <Credits theme={theme} />
     </>
