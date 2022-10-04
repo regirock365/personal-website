@@ -11,6 +11,12 @@ const Meta: React.FC<MetaProps> = () => (
     <link rel="shortcut icon" href="/favicon.svg" />
 
     <title>regirock365</title>
+
+    <script
+      defer
+      data-domain="regirock365.com"
+      src="https://plausible.io/js/plausible.js"
+    />
   </Head>
 );
 
