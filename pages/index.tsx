@@ -328,9 +328,15 @@ const Home: React.FC<Props> = ({ photos }) => {
 
       <section className="sticky p-3 pb-16 md:p-6 md:pb-16">
         <h2 className="mb-3 md:mb-6">My Work</h2>
-        <div className="space-y-10 md:space-y-5">
+        <div className="grid max-w-7xl grid-cols-1 items-stretch gap-10 sm:grid-cols-2 md:grid-cols-1 md:gap-5 lg:grid-cols-2">
           {projects.map((project) => (
-            <div key={project.title} className="flex flex-col md:flex-row">
+            <a
+              key={project.title}
+              href={project.address}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
+            >
               <div
                 className={classNames(
                   "mr-3 h-32 w-full rounded-lg bg-cover bg-center shadow-lg md:mr-6 md:h-24 md:w-32",
@@ -349,14 +355,9 @@ const Home: React.FC<Props> = ({ photos }) => {
               <div>
                 <h3>{project.title}</h3>
                 <div className="flex items-center gap-5">
-                  <a
-                    href={project.address}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-blue-500 hover:text-blue-600 active:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 dark:active:text-blue-700"
-                  >
+                  <span className="text-blue-500 hover:text-blue-600 active:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 dark:active:text-blue-700">
                     {project.link}
-                  </a>
+                  </span>
                   <span className="w-5 border border-gray-400 dark:border-gray-500"></span>
                   <span className="text-gray-600 dark:text-slate-300">
                     {project.time}
@@ -364,7 +365,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                 </div>
                 <p className="max-w-xl">{project.description}</p>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </section>
