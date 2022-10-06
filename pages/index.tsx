@@ -335,7 +335,7 @@ const Home: React.FC<Props> = ({ photos }) => {
               href={project.address}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
+              className="flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 md:flex-row"
             >
               <div
                 className={classNames(
