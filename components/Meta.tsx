@@ -7,7 +7,7 @@ const Meta: React.FC<MetaProps> = () => (
     <meta charSet="utf-8" />
     <meta httpEquiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="royalblue" />
+    <meta name="theme-color" content="darkorange" />
     <link rel="shortcut icon" href="/favicon.svg" />
 
     <title>regirock365</title>
