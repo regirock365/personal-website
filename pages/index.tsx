@@ -80,6 +80,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1655107303/ClassCart_Card_Image_gmi5v9.png",
     time: "2015",
+    major: true,
   },
   {
     title: "Convert",
@@ -89,6 +90,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1601877136/Convert_Meta_Image_siit36.png",
     time: "2020",
+    major: false,
   },
   {
     title: "Recipe Generator",
@@ -99,6 +101,7 @@ const projects = [
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
     time: "2021",
     soon: false,
+    major: false,
   },
   // {
   //   title: "Jibu",
@@ -119,6 +122,7 @@ const projects = [
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1663414068/Recipe_Search_Card_Image_nvyerh.png",
     time: "2022",
     soon: false,
+    major: false,
   },
 ];
 
@@ -335,7 +339,12 @@ const Home: React.FC<Props> = ({ photos }) => {
               href={project.address}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 hover:bg-gray-100/50 dark:hover:bg-slate-800/50 md:flex-row"
+              className={classNames(
+                "flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 transition hover:bg-gray-100/50 dark:hover:bg-slate-800/50 md:flex-row",
+                project.major
+                  ? "border-2 border-amber-500/50 hover:border-amber-500"
+                  : ""
+              )}
             >
               <div
                 className={classNames(
