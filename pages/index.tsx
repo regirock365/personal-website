@@ -7,7 +7,12 @@ import {
 } from "@styled-icons/fa-brands";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
-import { DesktopComputer, Moon, Sun } from "styled-icons/heroicons-solid";
+import {
+  DesktopComputer,
+  DotsVertical,
+  Moon,
+  Sun,
+} from "styled-icons/heroicons-solid";
 import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Credits from "../components/Credits";
@@ -131,6 +136,7 @@ const Home: React.FC<Props> = ({ photos }) => {
   const [showLight, setShowLight] = useState(false);
   const [lightOn, setLightOn] = useState(false);
   const [theme, setTheme] = useLocalStorageState("theme", "system");
+  const [guidelines, setGuidelines] = useLocalStorageState("guidelines", true);
 
   useEffect(() => {
     if (
@@ -184,9 +190,21 @@ const Home: React.FC<Props> = ({ photos }) => {
         </div>
       </div>
 
-      <div className="fixed top-2 right-2 z-20 sm:top-3 sm:right-3 md:top-8 md:right-8">
+      <div className="fixed top-2 right-2 z-20 flex gap-2 sm:top-3 sm:right-3 md:top-8 md:right-8">
+        <button
+          className={classNames(
+            "rounded-md bg-gray-100/50 p-2 text-gray-800 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-700 dark:hover:bg-slate-800/75",
+            guidelines ? "opacity-100" : "opacity-25"
+          )}
+          onClick={() => {
+            setGuidelines(!guidelines);
+          }}
+        >
+          <DotsVertical className="w-6 text-gray-800 dark:text-slate-100" />
+        </button>
+
         <Menu>
-          <Menu.Button className="rounded-md bg-gray-100/50 p-2 text-gray-900 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-400 dark:hover:bg-slate-800/75">
+          <Menu.Button className="rounded-md bg-gray-100/50 p-2 text-gray-900 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-700 dark:hover:bg-slate-800/75">
             <Sun className="w-6 text-gray-800 dark:text-slate-100" />
           </Menu.Button>
           <Transition
@@ -333,7 +351,11 @@ const Home: React.FC<Props> = ({ photos }) => {
 
       <div className="px-3 md:px-6">
         <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-          <GuidingLines mdAmount={2} lgAmount={3} />
+          <GuidingLines
+            showGuidingLines={guidelines}
+            mdAmount={2}
+            lgAmount={3}
+          />
 
           <h2 className="mb-3 md:mb-6">My Work</h2>
           <div className="grid grid-cols-1 items-stretch gap-10 sm:grid-cols-2 md:grid-cols-1 md:gap-5 lg:grid-cols-2">
@@ -383,13 +405,13 @@ const Home: React.FC<Props> = ({ photos }) => {
           </div>
         </section>
 
-        <Unsplash photos={photos} key="og" />
+        <Unsplash photos={photos} key="og" showGuidingLines={guidelines} />
 
-        <Videos />
+        <Videos showGuidingLines={guidelines} />
 
-        {/* <FlexZone /> */}
+        {/* <FlexZone showGuidingLines={guidelines} /> */}
 
-        <Credits theme={theme} />
+        <Credits theme={theme} showGuidingLines={guidelines} />
       </div>
     </>
   );

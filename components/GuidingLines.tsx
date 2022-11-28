@@ -2,13 +2,19 @@ import React from "react";
 import { classNames } from "../lib/util";
 
 interface Props {
+  showGuidingLines?: boolean;
   mdAmount?: number;
   lgAmount?: number;
   xlAmount?: number;
 }
 
-const GuidingLines: React.FC<Props> = ({ mdAmount, lgAmount, xlAmount }) => {
-  return (
+const GuidingLines: React.FC<Props> = ({
+  showGuidingLines,
+  mdAmount,
+  lgAmount,
+  xlAmount,
+}) => {
+  return showGuidingLines ? (
     <div className="pointer-events-none absolute flex h-full w-full justify-between">
       {Array.from({ length: 5 }).map((_, index) => (
         <div
@@ -27,7 +33,7 @@ const GuidingLines: React.FC<Props> = ({ mdAmount, lgAmount, xlAmount }) => {
         />
       ))}
     </div>
-  );
+  ) : null;
 };
 
 export default GuidingLines;

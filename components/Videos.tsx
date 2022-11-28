@@ -1,6 +1,8 @@
 import GuidingLines from "./GuidingLines";
 
-interface Props {}
+interface Props {
+  showGuidingLines?: boolean;
+}
 
 const video_data = [
   {
@@ -89,10 +91,14 @@ const video_data = [
   },
 ];
 
-const Videos: React.FC<Props> = ({}) => {
+const Videos: React.FC<Props> = ({ showGuidingLines }) => {
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines mdAmount={2} xlAmount={3} />
+      <GuidingLines
+        showGuidingLines={showGuidingLines}
+        mdAmount={2}
+        xlAmount={3}
+      />
 
       <section className="md:px-2">
         <div className="mb-3 md:mb-6">

@@ -1,11 +1,13 @@
 import GuidingLines from "./GuidingLines";
 
-interface Props {}
+interface Props {
+  showGuidingLines?: boolean;
+}
 
-const FlexZone: React.FC<Props> = ({}) => {
+const FlexZone: React.FC<Props> = ({ showGuidingLines }) => {
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines mdAmount={2} />
+      <GuidingLines showGuidingLines={showGuidingLines} mdAmount={2} />
 
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">

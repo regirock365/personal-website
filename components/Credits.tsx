@@ -3,9 +3,10 @@ import GuidingLines from "./GuidingLines";
 
 interface Props {
   theme: string;
+  showGuidingLines?: boolean;
 }
 
-const Credits: React.FC<Props> = ({ theme }) => {
+const Credits: React.FC<Props> = ({ theme, showGuidingLines }) => {
   const [isDarkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -22,7 +23,7 @@ const Credits: React.FC<Props> = ({ theme }) => {
 
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines mdAmount={2} />
+      <GuidingLines showGuidingLines={showGuidingLines} mdAmount={2} />
 
       <section className="md:px-2">
         <div className="mb-3 md:mb-6">

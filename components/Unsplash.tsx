@@ -6,14 +6,15 @@ import GuidingLines from "./GuidingLines";
 
 interface Props {
   photos: Basic[];
+  showGuidingLines?: boolean;
 }
 
-const Unsplash: React.FC<Props> = ({ photos }) => {
+const Unsplash: React.FC<Props> = ({ photos, showGuidingLines }) => {
   const shuffledPhotos = useMemo(() => shuffle(photos), []);
 
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines mdAmount={3} />
+      <GuidingLines showGuidingLines={showGuidingLines} mdAmount={3} />
 
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Unsplash Favourites</h2>
