@@ -101,15 +101,16 @@ const Videos: React.FC<Props> = ({}) => {
         </span>
       </div>
       <div
-        className="xl:gridfff xl:space-y-0sda block gap-3 space-y-4 pb-3"
-        // style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
+        className="xl:space-y-0sda block gap-3 space-y-4 pb-3 xl:grid"
+        style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
       >
         {video_data.map((video) => (
           <a
             key={video.url}
             href={video.url}
             target="_blank"
-            className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 md:flex-row"
+            className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 md:flex-row xl:grid"
+            style={{ gridTemplateColumns: "1fr 24rem" }}
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
             <div className="group relative h-min shrink-0">
@@ -128,10 +129,10 @@ const Videos: React.FC<Props> = ({}) => {
               </small>
             </div>
             <div>
-              <h4 className="mb-1 text-xl md:mb-0 md:text-2xl">
+              <h4 className="mb-1 text-xl md:mb-0 md:text-2xl xl:mb-2 xl:truncate">
                 {video.title}
               </h4>
-              <p>{video.description}</p>
+              <p className="xl:line-clamp-3">{video.description}</p>
             </div>
           </a>
         ))}
