@@ -1,16 +1,24 @@
 import React from "react";
+import { classNames } from "../lib/util";
 
 interface Props {
-  amount: number;
+  mdAmount?: number;
+  lgAmount?: number;
+  xlAmount?: number;
 }
 
-const GuidingLines: React.FC<Props> = ({ amount }) => {
+const GuidingLines: React.FC<Props> = ({ mdAmount, lgAmount, xlAmount }) => {
   return (
     <div className="pointer-events-none absolute flex h-full w-full justify-between">
-      {Array.from({ length: amount }).map((_, index) => (
+      {Array.from({ length: 5 }).map((_, index) => (
         <div
           key={index}
-          className="w-[1px] bg-gradient-linear-to-b from-gray-600/20 to-transparent bg-left-top bg-repeat-y dark:from-slate-300/20"
+          className={classNames(
+            "hidden w-[1px] bg-gradient-linear-to-b from-gray-600/20 to-transparent bg-left-top bg-repeat-y dark:from-slate-300/20",
+            mdAmount ? (index < mdAmount ? "md:block" : "md:hidden") : "",
+            lgAmount ? (index < lgAmount ? "lg:block" : "lg:hidden") : "",
+            xlAmount ? (index < xlAmount ? "xl:block" : "xl:hidden") : ""
+          )}
           style={{
             // backgroundImage:
             //   "linear-gradient(to bottom, rgb(255 255 255 / 20%) 50%, transparent 50%)",

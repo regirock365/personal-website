@@ -13,7 +13,7 @@ const Unsplash: React.FC<Props> = ({ photos }) => {
 
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines amount={3} />
+      <GuidingLines mdAmount={3} />
 
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Unsplash Favourites</h2>

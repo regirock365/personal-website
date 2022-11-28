@@ -5,7 +5,7 @@ interface Props {}
 const FlexZone: React.FC<Props> = ({}) => {
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines amount={2} />
+      <GuidingLines mdAmount={2} />
 
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">

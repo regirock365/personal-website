@@ -92,51 +92,56 @@ const video_data = [
 const Videos: React.FC<Props> = ({}) => {
   return (
     <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
-      <GuidingLines amount={2} />
+      <GuidingLines mdAmount={2} xlAmount={3} />
 
-      <div className="mb-3 md:mb-6">
-        <h2 className="mb-1">Videos I Like</h2>
-        <span className="text-gray-600 dark:text-slate-300">
-          In no particular order
-        </span>
-      </div>
-      <div
-        className="xl:space-y-0sda block gap-3 space-y-4 pb-3 xl:grid"
-        style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
-      >
-        {video_data.map((video) => (
-          <a
-            key={video.url}
-            href={video.url}
-            target="_blank"
-            className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 md:flex-row xl:grid"
-            style={{ gridTemplateColumns: "1fr 24rem" }}
-          >
-            {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
-            <div className="group relative h-min shrink-0">
-              <img
-                src={video.thumbnail_url}
-                alt={video.title}
-                className="w-full rounded md:w-56"
-              />
-              {/* <img
+      <section className="md:px-2">
+        <div className="mb-3 md:mb-6">
+          <h2 className="mb-1">Videos I Like</h2>
+          <span className="text-gray-600 dark:text-slate-300">
+            In no particular order
+          </span>
+        </div>
+        <div
+          className="xl:space-y-0sda block gap-3 space-y-4 pb-3 xl:grid"
+          style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
+        >
+          {video_data.map((video) => (
+            <a
+              key={video.url}
+              href={video.url}
+              target="_blank"
+              className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 md:flex-row xl:grid"
+              style={{ gridTemplateColumns: "1fr 24rem" }}
+            >
+              {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
+              <div className="group relative h-min shrink-0">
+                <img
+                  src={video.thumbnail_url}
+                  alt={video.title}
+                  className="w-full rounded md:w-56"
+                />
+                {/* <img
                 src={video.preview_url}
                 alt={video.title}
                 className="w-full rounded md:w-56 absolute inset-0 opacity-0 group-hover:opacity-100"
               /> */}
-              <small className="absolute bottom-0 right-0 mb-2 mr-2 bg-black/75 p-1 text-white">
-                {video.duration}
-              </small>
-            </div>
-            <div>
-              <h4 className="mb-1 text-xl md:mb-0 md:text-2xl xl:mb-2 xl:truncate">
-                {video.title}
-              </h4>
-              <p className="xl:line-clamp-3">{video.description}</p>
-            </div>
-          </a>
-        ))}
-      </div>
+                <small className="absolute bottom-0 right-0 mb-2 mr-2 bg-black/75 p-1 text-white">
+                  {video.duration}
+                </small>
+              </div>
+              <div>
+                <h4
+                  className="mb-1 text-xl md:mb-0 md:text-2xl xl:mb-2 xl:truncate"
+                  title={video.title}
+                >
+                  {video.title}
+                </h4>
+                <p className="xl:line-clamp-3">{video.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
     </section>
   );
 };
