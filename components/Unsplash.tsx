@@ -29,15 +29,15 @@ const Unsplash: React.FC<Props> = ({ photos, showGuidingLines }) => {
           <div className="relative overflow-hidden rounded-lg">
             <div className="flex w-full snap-x gap-8 overflow-x-auto">
               <div
-                className="absolute left-0 top-0 z-10 h-full bg-black/10 opacity-100 transition"
-                style={{ width: "1px", boxShadow: "2px 0px 30px 4px black" }}
+                className="absolute -left-1 top-0 z-10 h-full bg-black/10 opacity-100 transition"
+                style={{ width: "1px", boxShadow: "2px 0px 30px 12px black" }}
               />
               <div
-                className="absolute right-0 top-0 z-10 h-full bg-black/10 opacity-100 transition"
-                style={{ width: "1px", boxShadow: "-2px 0px 30px 4px black" }}
+                className="absolute -right-1 top-0 z-10 h-full bg-black/10 opacity-100 transition"
+                style={{ width: "1px", boxShadow: "-2px 0px 30px 12px black" }}
               />
 
-              <div className="z-10 h-52 w-[40%] shrink-0  md:h-80" />
+              <div className="z-10 h-52 w-[40%] shrink-0 bg-white dark:bg-slate-900  md:h-80" />
               {shuffledPhotos.map((photo) => (
                 <a
                   key={photo.id}
@@ -52,7 +52,7 @@ const Unsplash: React.FC<Props> = ({ photos, showGuidingLines }) => {
                   />
                 </a>
               ))}
-              <div className="z-10 h-52 w-[40%] shrink-0  md:h-80" />
+              <div className="z-10 h-52 w-[40%] shrink-0 bg-white dark:bg-slate-900  md:h-80" />
             </div>
           </div>
         </div>
