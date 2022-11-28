@@ -1,3 +1,5 @@
+import GuidingLines from "./GuidingLines";
+
 interface Props {}
 
 const video_data = [
@@ -89,7 +91,9 @@ const video_data = [
 
 const Videos: React.FC<Props> = ({}) => {
   return (
-    <section className="p-3 pb-16 md:p-6 md:pb-16">
+    <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
+      <GuidingLines amount={2} />
+
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Videos I Like</h2>
         <span className="text-gray-600 dark:text-slate-300">
@@ -97,15 +101,15 @@ const Videos: React.FC<Props> = ({}) => {
         </span>
       </div>
       <div
-        className="xl:gridfff xl:space-y-0sda block max-w-7xl gap-3 space-y-4 pb-3"
-        style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
+        className="xl:gridfff xl:space-y-0sda block gap-3 space-y-4 pb-3"
+        // style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
       >
         {video_data.map((video) => (
           <a
             key={video.url}
             href={video.url}
             target="_blank"
-            className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-100 dark:hover:bg-slate-800 md:flex-row"
+            className="flex flex-col gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 md:flex-row"
           >
             {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
             <div className="group relative h-min shrink-0">
@@ -132,22 +136,6 @@ const Videos: React.FC<Props> = ({}) => {
           </a>
         ))}
       </div>
-      {/* <div className="relative w-full flex gap-8 pb-3 snap-x overflow-x-auto md:pb-6">
-        {shuffle(photos).map((photo) => (
-          <a
-            key={photo.id}
-            href={photo.links.html}
-            target="_blank"
-            className="relative snap-center shrink-0 rounded-lg overflow-x-hidden group"
-          >
-            <img
-              src={photo.urls.small}
-              alt={photo.description}
-              className="h-52 md:h-80"
-            />
-          </a>
-        ))}
-      </div> */}
     </section>
   );
 };

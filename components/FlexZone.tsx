@@ -1,8 +1,12 @@
+import GuidingLines from "./GuidingLines";
+
 interface Props {}
 
 const FlexZone: React.FC<Props> = ({}) => {
   return (
-    <section className="p-3 pb-16 md:p-6 md:pb-16">
+    <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
+      <GuidingLines amount={2} />
+
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">
           <span className="line-through opacity-25">No</span> Flex Zone 💪

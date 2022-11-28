@@ -12,6 +12,7 @@ import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Credits from "../components/Credits";
 import FlexZone from "../components/FlexZone";
+import GuidingLines from "../components/GuidingLines";
 import Unsplash from "../components/Unsplash";
 import Videos from "../components/Videos";
 import useLocalStorageState from "../hooks/useLocalStorageState";
@@ -330,62 +331,66 @@ const Home: React.FC<Props> = ({ photos }) => {
         </section>
       </div>
 
-      <section className="sticky p-3 pb-16 md:p-6 md:pb-16">
-        <h2 className="mb-3 md:mb-6">My Work</h2>
-        <div className="grid max-w-7xl grid-cols-1 items-stretch gap-10 sm:grid-cols-2 md:grid-cols-1 md:gap-5 lg:grid-cols-2">
-          {projects.map((project) => (
-            <a
-              key={project.title}
-              href={project.address}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={classNames(
-                "flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 transition hover:bg-gray-100/50 dark:hover:bg-slate-800/50 md:flex-row",
-                project.major
-                  ? "border-2 border-amber-500/50 hover:border-amber-500"
-                  : ""
-              )}
-            >
-              <div
+      <div className="px-3 md:px-6">
+        <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
+          <GuidingLines amount={3} />
+
+          <h2 className="mb-3 md:mb-6">My Work</h2>
+          <div className="grid grid-cols-1 items-stretch gap-10 sm:grid-cols-2 md:grid-cols-1 md:gap-5 lg:grid-cols-2">
+            {projects.map((project) => (
+              <a
+                key={project.title}
+                href={project.address}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={classNames(
-                  "mr-3 h-32 w-full rounded-lg bg-cover bg-center shadow-lg md:mr-6 md:h-24 md:w-32",
-                  project.soon
-                    ? "to animate-pulse cursor-wait bg-red-500 bg-gradient-to-tr from-yellow-500 via-amber-500"
+                  "flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 transition hover:bg-gray-200/75 dark:hover:bg-slate-800/75 md:flex-row",
+                  project.major
+                    ? "border-2 border-amber-500/50 hover:border-amber-500"
                     : ""
                 )}
-                style={
-                  project.soon
-                    ? {}
-                    : {
-                        backgroundImage: `url('${project.imageURL}')`,
-                      }
-                }
-              />
-              <div>
-                <h3>{project.title}</h3>
-                <div className="flex items-center gap-5">
-                  <span className="text-blue-500 hover:text-blue-600 active:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 dark:active:text-blue-700">
-                    {project.link}
-                  </span>
-                  <span className="w-5 border border-gray-400 dark:border-gray-500"></span>
-                  <span className="text-gray-600 dark:text-slate-300">
-                    {project.time}
-                  </span>
+              >
+                <div
+                  className={classNames(
+                    "mr-3 h-32 w-full rounded-lg bg-cover bg-center shadow-lg md:mr-6 md:h-24 md:w-32",
+                    project.soon
+                      ? "to animate-pulse cursor-wait bg-red-500 bg-gradient-to-tr from-yellow-500 via-amber-500"
+                      : ""
+                  )}
+                  style={
+                    project.soon
+                      ? {}
+                      : {
+                          backgroundImage: `url('${project.imageURL}')`,
+                        }
+                  }
+                />
+                <div>
+                  <h3>{project.title}</h3>
+                  <div className="flex items-center gap-5">
+                    <span className="text-blue-500 hover:text-blue-600 active:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 dark:active:text-blue-700">
+                      {project.link}
+                    </span>
+                    <span className="w-5 border border-gray-400 dark:border-gray-500"></span>
+                    <span className="text-gray-600 dark:text-slate-300">
+                      {project.time}
+                    </span>
+                  </div>
+                  <p className="max-w-xl">{project.description}</p>
                 </div>
-                <p className="max-w-xl">{project.description}</p>
-              </div>
-            </a>
-          ))}
-        </div>
-      </section>
+              </a>
+            ))}
+          </div>
+        </section>
 
-      <Unsplash photos={photos} key="og" />
+        <Unsplash photos={photos} key="og" />
 
-      <Videos />
+        <Videos />
 
-      {/* <FlexZone /> */}
+        {/* <FlexZone /> */}
 
-      <Credits theme={theme} />
+        <Credits theme={theme} />
+      </div>
     </>
   );
 };

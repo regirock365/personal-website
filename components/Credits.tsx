@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import GuidingLines from "./GuidingLines";
 
 interface Props {
   theme: string;
@@ -20,7 +21,9 @@ const Credits: React.FC<Props> = ({ theme }) => {
   }, [theme]);
 
   return (
-    <section className="p-3 pb-16 md:p-6 md:pb-16">
+    <section className="relative max-w-7xl py-3 pb-16 md:py-6 md:pb-16">
+      <GuidingLines amount={2} />
+
       <div className="mb-3 md:mb-6">
         <h2 className="mb-1">Credits</h2>
         {/* <span className="text-gray-600">
