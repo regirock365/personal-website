@@ -61,12 +61,10 @@ body {
 } */
 
 .area {
-  width: 200px;
-  height: 500px;
   animation: swing 1s infinite ease-in-out alternate;
   position: fixed;
   top: 0;
-  right: 100px;
+  right: 300px;
   z-index: 20;
   transform-origin: top;
   -moz-transform-origin: top;

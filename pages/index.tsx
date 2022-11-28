@@ -165,7 +165,7 @@ const Home: React.FC<Props> = ({ photos }) => {
     <>
       <div
         className={classNames(
-          "area hidden transition md:block",
+          "area hidden transition lg:block",
           showLight ? "" : "hide"
         )}
       >
