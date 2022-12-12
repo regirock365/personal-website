@@ -18,6 +18,7 @@ import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Credits from "../components/Credits";
 import FlexZone from "../components/FlexZone";
 import GuidingLines from "../components/GuidingLines";
+import PersonalSites from "../components/PersonalSites";
 import Unsplash from "../components/Unsplash";
 import Videos from "../components/Videos";
 import useLocalStorageState from "../hooks/useLocalStorageState";
@@ -410,6 +411,8 @@ const Home: React.FC<Props> = ({ photos }) => {
         <Unsplash photos={photos} key="og" showGuidingLines={guidelines} />
 
         <Videos showGuidingLines={guidelines} />
+
+        <PersonalSites showGuidingLines={guidelines} />
 
         {/* <FlexZone showGuidingLines={guidelines} /> */}
 
