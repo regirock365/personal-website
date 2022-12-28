@@ -137,7 +137,7 @@ const projects = [
     address: "https://www.frontgpt.com/",
     description: "Your GPT-3 Powered Assistant in Front",
     imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672111779/FrontGPT_Card_Image_cnjzts.png",
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
     time: "2022",
     soon: false,
     major: false,
