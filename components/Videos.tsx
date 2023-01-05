@@ -108,7 +108,7 @@ const Videos: React.FC<Props> = ({ showGuidingLines }) => {
           </span>
         </div>
         <div
-          className="xl:space-y-0sda block gap-3 space-y-4 pb-3 xl:grid"
+          className="block gap-3 space-y-4 pb-3 xl:grid xl:space-y-0"
           style={{ gridTemplateColumns: "repeat(2, minmax(300px, 1fr))" }}
         >
           {video_data.map((video) => (
