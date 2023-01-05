@@ -64,7 +64,7 @@ body {
   animation: swing 1s infinite ease-in-out alternate;
   position: fixed;
   top: 0;
-  right: 300px;
+  right: 250px;
   z-index: 20;
   transform-origin: top;
   -moz-transform-origin: top;
@@ -77,8 +77,8 @@ body {
 
 .wire {
   position: relative;
-  left: 98px;
-  height: 200px;
+  left: calc(50% - 2px);
+  height: 150px;
   width: 4px;
   background-color: black;
 }
@@ -88,7 +88,7 @@ body {
   background-color: grey;
   width: 16px;
   height: 20px;
-  left: 92px;
+  left: calc(50% - 8px);
 }
 
 .strip {
@@ -112,7 +112,7 @@ body {
   position: relative;
   width: 40px;
   height: 40px;
-  left: 80px;
+  left: calc(50% - 20px);
   bottom: 2px;
   z-index: -1;
   background-color: rgba(67, 67, 67, 0.85);
