@@ -116,7 +116,7 @@ const Videos: React.FC<Props> = ({ showGuidingLines }) => {
               key={video.url}
               href={video.url}
               target="_blank"
-              className="gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 sm:flex sm:flex-row xl:grid"
+              className="block gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 sm:flex sm:flex-row xl:grid"
               style={{ gridTemplateColumns: "1fr 24rem" }}
             >
               {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
@@ -135,7 +135,7 @@ const Videos: React.FC<Props> = ({ showGuidingLines }) => {
                   {video.duration}
                 </small>
               </div>
-              <div className="min-h-[6rem]">
+              <div className="min-h-[4rem]">
                 <h4
                   className="mb-1 text-xl sm:mb-0 sm:text-2xl xl:mb-2 xl:truncate"
                   title={video.title}
