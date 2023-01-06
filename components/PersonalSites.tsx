@@ -71,11 +71,11 @@ const PersonalSites: React.FC<Props> = ({ showGuidingLines }) => {
                 </small>
               </div> */}
               <div>
-                <div className="mb-1 flex items-center gap-2 md:mb-0">
+                <div className="mb-1 flex flex-col items-start gap-2 sm:flex-row sm:items-center md:mb-0">
                   <h4 className="text-xl md:text-2xl" title={site.title}>
                     {site.title}
                   </h4>
-                  <span className="w-5 border border-gray-400 dark:border-gray-500"></span>
+                  <span className="hidden w-5 border border-gray-400 dark:border-gray-500 sm:inline-block" />
                   <span className="text-blue-500 hover:text-blue-600 active:text-blue-800 dark:text-blue-400 dark:hover:text-blue-500 dark:active:text-blue-700">
                     {site.url.replace(/https?:\/\//, "").replace(/\/$/, "")}
                   </span>

@@ -155,3 +155,22 @@ body {
     transform: rotate(-3deg);
   }
 }
+
+/* Shape around YouTube vide thumbnail on small view widths */
+@media screen and (max-width: 640px) {
+  .shape-around {
+    /* shape-outside: polygon(
+      0 0,
+      calc(100% + 5px) 0,
+      calc(100% + 5px) calc(100% + 5px),
+      0 calc(100% - 1px)
+    ); */
+    /* margin: 0 0 1rem 0; */
+    overflow: hidden;
+    width: 8rem;
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+    /* height: 3rem; */
+    float: left;
+  }
+}
