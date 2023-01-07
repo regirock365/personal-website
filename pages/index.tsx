@@ -117,7 +117,7 @@ const projects = [
   //   description: "A GPT-3 powered answer engine.",
   //   imageURL:
   //     "https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg",
-  //   time: "Coming Soon...",
+  //   time: "Soon...",
   //   soon: true,
   // },
   {
@@ -140,6 +140,17 @@ const projects = [
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
     time: "2022",
     soon: false,
+    major: false,
+  },
+  {
+    title: "Writing Assistant",
+    link: "law-ai.vercel.app/text-editor",
+    address: "https://law-ai.vercel.app/text-editor",
+    description: "A GPT-3 powered writing assistant.",
+    imageURL:
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
+    time: "Soon...",
+    soon: true,
     major: false,
   },
 ];
