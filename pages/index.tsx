@@ -153,6 +153,17 @@ const projects = [
   //   soon: true,
   //   major: false,
   // },
+  {
+    title: "Langflix",
+    link: "lang-flix.com",
+    address: "https://lang-flix.com/",
+    description: "Language learning with Netflix.",
+    imageURL:
+      "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmV0ZmxpeHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
+    time: "2023",
+    soon: false,
+    major: true,
+  },
 ];
 
 const Home: React.FC<Props> = ({ photos }) => {
