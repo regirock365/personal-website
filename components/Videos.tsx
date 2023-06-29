@@ -89,6 +89,16 @@ const video_data = [
     duration: "39:30",
     description: "",
   },
+  {
+    title: "Animation vs. Math",
+    url: "https://www.youtube.com/watch?v=B1J6Ou4q8vE",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/B1J6Ou4q8vE/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCqVEpKQEg0GXgSNoSDdzaoZChiRg",
+    preview_url:
+      "https://i.ytimg.com/an_webp/NEadoEGgcHk/mqdefault_6s.webp?du=3000&sqp=CKanlpkG&rs=AOn4CLCs8M0Q1_Qo3VKyWUEY2hZwBJdGuw",
+    duration: "14:03",
+    description: "How much of this math do you know?",
+  },
 ];
 
 const Videos: React.FC<Props> = ({ showGuidingLines }) => {
