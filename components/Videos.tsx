@@ -99,6 +99,17 @@ const video_data = [
     duration: "14:03",
     description: "How much of this math do you know?",
   },
+  {
+    title: "Numbers They Don't Teach You In School",
+    url: "https://www.youtube.com/watch?v=tRaq4aYPzCc",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/tRaq4aYPzCc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYaeH1O8cVNhFPvUrtV-f_ioiIow",
+    preview_url:
+      "https://i.ytimg.com/an_webp/NEadoEGgcHk/mqdefault_6s.webp?du=3000&sqp=CKanlpkG&rs=AOn4CLCs8M0Q1_Qo3VKyWUEY2hZwBJdGuw",
+    duration: "33:06",
+    description:
+      "There's a strange number system, featured in the work of a dozen Fields Medalists, that helps solve problems that are intractable with real numbers.",
+  },
 ];
 
 const Videos: React.FC<Props> = ({ showGuidingLines }) => {
