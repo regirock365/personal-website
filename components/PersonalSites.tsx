@@ -36,7 +36,7 @@ const PersonalSites: React.FC<Props> = ({ showGuidingLines }) => {
         <div className="mb-3 md:mb-6">
           <h2 className="mb-1">Personal Websites I Like</h2>
           <span className="block text-gray-600 dark:text-slate-300">
-            If you have any suggestions, please let me know{" "}
+            If you have a suggestion, let me know{" "}
             <a
               href="https://twitter.com/regirock365"
               target="_blank"
