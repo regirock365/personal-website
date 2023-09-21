@@ -83,7 +83,7 @@ const projects = [
     title: "ClassCart",
     link: "class-cart.com",
     address: "https://class-cart.com/",
-    description: "Food order management for school cooking classes.",
+    description: "Streamlined food ordering for schools.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1655107303/ClassCart_Card_Image_gmi5v9.png",
     time: "2015",
