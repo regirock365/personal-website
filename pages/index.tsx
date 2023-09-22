@@ -426,7 +426,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                         : ""
                     )}
                     style={
-                      project.soon
+                      project.soon && !project.imageURL
                         ? {}
                         : {
                             backgroundImage: `url('${project.imageURL}')`,
