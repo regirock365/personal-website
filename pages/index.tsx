@@ -170,7 +170,7 @@ const projects = [
     address: "https://www.austliiexplorer.com/",
     description: "A better way to search AustLII.",
     imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg",
+      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1695374061/AustLII_Explorer_pc0vks.png",
     time: "2023",
     soon: true,
     major: true,
