@@ -110,6 +110,18 @@ const video_data = [
     description:
       "There's a strange number system, featured in the work of a dozen Fields Medalists, that helps solve problems that are intractable with real numbers.",
   },
+  {
+    title:
+      "TT On-Board Like You've Never Seen Before! | 2023 Isle of Man TT Races",
+    url: "https://www.youtube.com/watch?v=4kstEvBVCUo",
+    thumbnail_url:
+      "https://i.ytimg.com/vi/4kstEvBVCUo/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAxCM_gWgVtGSEv8nW9A-dofj38_A",
+    preview_url:
+      "https://i.ytimg.com/an_webp/NEadoEGgcHk/mqdefault_6s.webp?du=3000&sqp=CKanlpkG&rs=AOn4CLCs8M0Q1_Qo3VKyWUEY2hZwBJdGuw",
+    duration: "21:29",
+    description:
+      "You've seen TT On Boards before, but never one quite like this!",
+  },
 ];
 
 const Videos: React.FC<Props> = ({ showGuidingLines }) => {
