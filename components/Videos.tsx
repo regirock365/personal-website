@@ -149,7 +149,7 @@ const Videos: React.FC<Props> = ({ showGuidingLines }) => {
               key={video.url}
               href={video.url}
               target="_blank"
-              className="block gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 sm:flex sm:flex-row xl:grid"
+              className="block gap-3 rounded-md p-2 transition hover:bg-gray-200 dark:hover:bg-slate-800 sm:flex sm:flex-row"
               style={{ gridTemplateColumns: "1fr 24rem" }}
             >
               {/* <div className="w-20 aspect-video rounded" style={{  }} /> */}
@@ -157,25 +157,25 @@ const Videos: React.FC<Props> = ({ showGuidingLines }) => {
                 <img
                   src={video.thumbnail_url}
                   alt={video.title}
-                  className="sms:w-32 w-32 rounded sm:w-40 md:w-56"
+                  className="sms:w-32 w-32 rounded sm:w-40"
                 />
                 {/* <img
                 src={video.preview_url}
                 alt={video.title}
                 className="w-full rounded sm:w-56 absolute inset-0 opacity-0 group-hover:opacity-100"
               /> */}
-                <small className="absolute bottom-0 right-0 mb-2 mr-2 bg-black/75 p-1 text-white">
+                <small className="absolute bottom-0 right-0 mb-1 mr-1 rounded bg-black/75 p-0.5 text-white">
                   {video.duration}
                 </small>
               </div>
               <div className="min-h-[4rem]">
                 <h4
-                  className="mb-1 text-xl sm:mb-0 sm:text-2xl xl:mb-2 xl:truncate"
+                  className="mb-1 text-xl sm:mb-0 sm:text-2xl xl:mb-2 xl:line-clamp-3"
                   title={video.title}
                 >
                   {video.title}
                 </h4>
-                <p className="xl:line-clamp-3">{video.description}</p>
+                {/* <p className="xl:line-clamp-3">{video.description}</p> */}
               </div>
             </a>
           ))}
