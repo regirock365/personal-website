@@ -21,6 +21,13 @@ const site_data = [
     description: "Co-founder of Stripe.",
     twitter: "patrickc",
   },
+  {
+    title: "Andrej Karpathy",
+    url: "https://karpathy.ai/",
+    thumbnail_url: "https://karpathy.ai/assets/me_new.jpg",
+    description: "I like to train deep neural nets on large datasets 🧠🤖💥",
+    twitter: "karpathy",
+  },
 ];
 
 const PersonalSites: React.FC<Props> = ({ showGuidingLines }) => {
