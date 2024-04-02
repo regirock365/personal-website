@@ -81,8 +81,8 @@ const webPresence = [
 const projects = [
   {
     title: "ClassCart",
-    link: "class-cart.com",
-    address: "https://class-cart.com/",
+    link: "classcart.com",
+    address: "https://classcart.com/",
     description: "Streamlined food ordering for schools.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1655107303/ClassCart_Card_Image_gmi5v9.png",
