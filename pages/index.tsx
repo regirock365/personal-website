@@ -379,7 +379,7 @@ const Home: React.FC<Props> = ({ photos }) => {
           <div className="ml-3 md:ml-6">
             <h1>regirock365</h1>
             <span className="text-xl text-gray-800 dark:text-slate-100">
-              Web Developer
+              Programmer/Screenwriter
             </span>
           </div>
         </header>
