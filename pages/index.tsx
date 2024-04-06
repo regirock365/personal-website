@@ -4,6 +4,7 @@ import {
   Instagram,
   Twitter,
   Unsplash as UnplashIcon,
+  Pinterest,
 } from "@styled-icons/fa-brands";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
@@ -75,6 +76,12 @@ const webPresence = [
     url: "https://instagram.com/regirock365",
     username: "regirock365",
     icon: Instagram,
+  },
+  {
+    name: "Pinterest",
+    url: "https://pinterest.com/regirock365",
+    username: "regirock365",
+    icon: Pinterest,
   },
 ];
 
