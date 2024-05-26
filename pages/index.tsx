@@ -459,11 +459,11 @@ const Home: React.FC<Props> = ({ photos }) => {
           </section>
         </section>
 
-        <Unsplash photos={photos} key="og" showGuidingLines={guidelines} />
-
         <Videos showGuidingLines={guidelines} />
 
         <PersonalSites showGuidingLines={guidelines} />
+
+        <Unsplash photos={photos} key="og" showGuidingLines={guidelines} />
 
         {/* <FlexZone showGuidingLines={guidelines} /> */}
 
