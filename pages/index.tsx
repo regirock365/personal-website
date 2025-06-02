@@ -94,7 +94,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1655107303/ClassCart_Card_Image_gmi5v9.png",
     time: "2015",
-    major: true,
+    type: "major",
   },
   {
     title: "Convert",
@@ -104,7 +104,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/v1601877136/Convert_Meta_Image_siit36.png",
     time: "2020",
-    major: false,
+    type: "minor",
   },
   {
     title: "Recipe Generator",
@@ -114,8 +114,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
     time: "2021",
-    soon: false,
-    major: false,
+    type: "minor",
   },
   // {
   //   title: "Jibu",
@@ -135,8 +134,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1663414068/Recipe_Search_Card_Image_nvyerh.png",
     time: "2022",
-    soon: false,
-    major: false,
+    type: "minor",
   },
   {
     title: "FrontGPT",
@@ -146,8 +144,7 @@ const projects = [
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
     time: "2022",
-    soon: false,
-    major: false,
+    type: "minor",
   },
   // {
   //   title: "Writing Assistant",
@@ -158,7 +155,7 @@ const projects = [
   //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
   //   time: "Soon...",
   //   soon: true,
-  //   major: false,
+  //   type: "minor",
   // },
   // {
   //   title: "Langflix",
@@ -169,7 +166,7 @@ const projects = [
   //     "https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8bmV0ZmxpeHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
   //   time: "2023",
   //   soon: false,
-  //   major: true,
+  //   type: "major",
   // },
   {
     title: "AustLII Explorer",
@@ -178,9 +175,18 @@ const projects = [
     description: "A better way to search AustLII.",
     imageURL:
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1695374061/AustLII_Explorer_pc0vks.png",
-    time: "2023",
+    time: "2025",
     soon: true,
-    major: true,
+    type: "major",
+  },
+  {
+    title: "Ange-Bella",
+    link: "ange-bella.com",
+    address: "https://www.ange-bella.com/",
+    description: "Musician.",
+    imageURL: "https://www.ange-bella.com/icon.jpg",
+    time: "2025",
+    type: "freelance",
   },
 ];
 
@@ -392,9 +398,9 @@ const Home: React.FC<Props> = ({ photos }) => {
                 href={presence.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="m-1 flex items-center gap-2 rounded-lg bg-white/25 p-2 text-xl transition hover:bg-white/50 dark:bg-white/40 dark:text-slate-900 dark:hover:bg-white/60"
+                className="m-1 flex items-center gap-2 rounded-lg p-2 text-xl text-slate-900 transition hover:text-slate-700 dark:text-white/40 dark:hover:text-white/60"
               >
-                <presence.icon className="mr-1 w-5" /> {presence.username}
+                <presence.icon className="mr-1 w-5" />
               </a>
             ))}
           </div>
@@ -410,7 +416,31 @@ const Home: React.FC<Props> = ({ photos }) => {
           />
 
           <section className="md:px-2">
-            <h2 className="mb-3 md:mb-6">My Work</h2>
+            <div className="flex items-center justify-between">
+              <h2 className="mb-3 md:mb-6">My Work</h2>
+              <div className="flex items-center gap-4">
+                <div className="flex items-center gap-1">
+                  <span className="h-4 w-4 rounded-full bg-amber-500/50" />
+                  <span className="text-sm text-gray-600 dark:text-slate-300">
+                    Major
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <span className="bg-gray-300/300 h-4 w-4 rounded-full bg-gray-300/50 dark:bg-slate-700/50" />
+                  <span className="text-sm text-gray-600 dark:text-slate-300">
+                    Minor
+                  </span>
+                </div>
+
+                <div className="flex items-center gap-1">
+                  <span className="h-4 w-4 rounded-full bg-green-500/50" />
+                  <span className="text-sm text-gray-600 dark:text-slate-300">
+                    Freelance
+                  </span>
+                </div>
+              </div>
+            </div>
             <div className="grid grid-cols-1 items-stretch gap-10 sm:grid-cols-2 md:grid-cols-1 md:gap-5 lg:grid-cols-2">
               {projects.map((project) => (
                 <a
@@ -420,9 +450,11 @@ const Home: React.FC<Props> = ({ photos }) => {
                   rel="noopener noreferrer"
                   className={classNames(
                     "flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 transition hover:bg-gray-200/75 dark:hover:bg-slate-800/75 md:flex-row",
-                    project.major
+                    project.type === "major"
                       ? "border-2 border-amber-500/50 hover:border-amber-500"
-                      : ""
+                      : project.type === "freelance"
+                      ? "border-2 border-green-500/50 hover:border-green-500"
+                      : "border-2 border-gray-300/50 hover:border-gray-400 dark:border-slate-700/50 dark:hover:border-slate-600"
                   )}
                 >
                   <div
