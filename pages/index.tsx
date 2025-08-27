@@ -106,16 +106,16 @@ const projects = [
     time: "2020",
     type: "minor",
   },
-  {
-    title: "Recipe Generator",
-    link: "recipegenerator.ai",
-    address: "https://recipegenerator.ai/",
-    description: "GPT-3 generated recipe ideas!",
-    imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
-    time: "2021",
-    type: "minor",
-  },
+  // {
+  //   title: "Recipe Generator",
+  //   link: "recipegenerator.ai",
+  //   address: "https://recipegenerator.ai/",
+  //   description: "GPT-3 generated recipe ideas!",
+  //   imageURL:
+  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1608934980/Recipe_Generator_Meta_Image_e8iwvt.png",
+  //   time: "2021",
+  //   type: "minor",
+  // },
   // {
   //   title: "Jibu",
   //   link: "jibu.vercel.app",
@@ -136,16 +136,16 @@ const projects = [
     time: "2022",
     type: "minor",
   },
-  {
-    title: "FrontGPT",
-    link: "frontgpt.com",
-    address: "https://www.frontgpt.com/",
-    description: "Your GPT Powered Assistant in Front",
-    imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
-    time: "2022",
-    type: "minor",
-  },
+  // {
+  //   title: "FrontGPT",
+  //   link: "frontgpt.com",
+  //   address: "https://www.frontgpt.com/",
+  //   description: "Your GPT Powered Assistant in Front",
+  //   imageURL:
+  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1672208359/FrontGPT_Card_Image_bpydxv.png",
+  //   time: "2022",
+  //   type: "minor",
+  // },
   // {
   //   title: "Writing Assistant",
   //   link: "law-ai.vercel.app/text-editor",
@@ -168,17 +168,17 @@ const projects = [
   //   soon: false,
   //   type: "major",
   // },
-  {
-    title: "AustLII Explorer",
-    link: "austliiexplorer.com",
-    address: "https://www.austliiexplorer.com/",
-    description: "A better way to search AustLII.",
-    imageURL:
-      "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1695374061/AustLII_Explorer_pc0vks.png",
-    time: "2025",
-    soon: true,
-    type: "major",
-  },
+  // {
+  //   title: "AustLII Explorer",
+  //   link: "austliiexplorer.com",
+  //   address: "https://www.austliiexplorer.com/",
+  //   description: "A better way to search AustLII.",
+  //   imageURL:
+  //     "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1695374061/AustLII_Explorer_pc0vks.png",
+  //   time: "2025",
+  //   soon: true,
+  //   type: "major",
+  // },
   {
     title: "Ange-Bella",
     link: "ange-bella.com",
