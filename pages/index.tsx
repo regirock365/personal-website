@@ -135,6 +135,7 @@ const projects = [
       "https://res.cloudinary.com/projectgroceries/image/upload/c_scale,w_750/v1663414068/Recipe_Search_Card_Image_nvyerh.png",
     time: "2022",
     type: "minor",
+    soon: false,
   },
   // {
   //   title: "FrontGPT",
