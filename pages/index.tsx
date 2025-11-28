@@ -59,12 +59,12 @@ const webPresence = [
     username: "regirock365",
     icon: Github,
   },
-  {
-    name: "Twitter",
-    url: "https://twitter.com/regirock365",
-    username: "regirock365",
-    icon: Twitter,
-  },
+  // {
+  //   name: "Twitter",
+  //   url: "https://twitter.com/regirock365",
+  //   username: "regirock365",
+  //   icon: Twitter,
+  // },
   {
     name: "Unsplash",
     url: "https://unsplash.com/@regirock365",
