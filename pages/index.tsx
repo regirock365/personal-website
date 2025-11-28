@@ -180,15 +180,6 @@ const projects = [
   //   soon: true,
   //   type: "major",
   // },
-  {
-    title: "Ange-Bella",
-    link: "ange-bella.com",
-    address: "https://www.ange-bella.com/",
-    description: "Musician.",
-    imageURL: "https://www.ange-bella.com/icon.jpg",
-    time: "2025",
-    type: "freelance",
-  },
 ];
 
 const Home: React.FC<Props> = ({ photos }) => {
