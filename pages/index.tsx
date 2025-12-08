@@ -357,27 +357,31 @@ const Home: React.FC<Props> = ({ photos }) => {
       </div>
 
       <div
-        className="absolute bg-cover bg-top"
+        className="absolute bg-cover bg-center"
         style={{
           backgroundImage:
-            "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
+            "url(https://res.cloudinary.com/regirock365/image/upload/v1765170179/IMG_5146_rmimyf.jpg)",
+          // "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
         }}
       >
-        <div className="h-[500px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur dark:from-slate-900/25 dark:to-slate-900 2xl:h-[750px]" />
+        <div className="h-[600px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur dark:from-slate-900/25 dark:to-slate-900 2xl:h-[750px]" />
       </div>
       <div className="sticky pb-16">
         <header className="flex items-center">
           <div className="to m-3 rounded-full bg-red-500 bg-gradient-to-tr from-yellow-500 via-amber-500 p-1 md:m-6">
-            <img
-              src="https://pbs.twimg.com/profile_images/1291555016155619329/9uGuMPfy_400x400.jpg"
-              alt="Picture of me"
-              className="h-24 w-24 rounded-full shadow-lg md:h-32 md:w-32"
+            <div
+              className="h-24 w-24 rounded-full bg-center shadow-lg md:h-32 md:w-32"
+              style={{
+                backgroundImage:
+                  "url('https://res.cloudinary.com/regirock365/image/upload/v1765170179/IMG_5146_rmimyf.jpg')",
+                backgroundSize: "175%",
+              }}
             />
           </div>
           <div className="ml-3 md:ml-6">
             <h1>regirock365</h1>
             <span className="text-xl text-gray-800 dark:text-slate-100">
-              Programmer/Screenwriter
+              Programmer/Screenwriter (Manifesting)
             </span>
           </div>
         </header>
