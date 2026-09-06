@@ -1,11 +1,5 @@
 import { Menu, Transition } from "@headlessui/react";
-import {
-  Github,
-  Instagram,
-  Twitter,
-  Unsplash as UnplashIcon,
-  Pinterest,
-} from "@styled-icons/fa-brands";
+import { Github, Instagram, Pinterest } from "@styled-icons/fa-brands";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
 import {
@@ -17,10 +11,7 @@ import {
 import { createApi, OrderBy } from "unsplash-js";
 import { Basic } from "unsplash-js/dist/methods/photos/types";
 import Credits from "../components/Credits";
-import FlexZone from "../components/FlexZone";
 import GuidingLines from "../components/GuidingLines";
-import PersonalSites from "../components/PersonalSites";
-import Unsplash from "../components/Unsplash";
 import Videos from "../components/Videos";
 import useLocalStorageState from "../hooks/useLocalStorageState";
 import { classNames } from "../lib/util";
@@ -35,7 +26,7 @@ interface Props {
 }
 
 export const getServerSideProps: GetServerSideProps<Props> = async (
-  context
+  context,
 ) => {
   const response = await unsplash.users.getPhotos({
     username: "regirock365",
@@ -65,12 +56,12 @@ const webPresence = [
   //   username: "regirock365",
   //   icon: Twitter,
   // },
-  {
-    name: "Unsplash",
-    url: "https://unsplash.com/@regirock365",
-    username: "regirock365",
-    icon: UnplashIcon,
-  },
+  // {
+  //   name: "Unsplash",
+  //   url: "https://unsplash.com/@regirock365",
+  //   username: "regirock365",
+  //   icon: UnplashIcon,
+  // },
   {
     name: "Instagram",
     url: "https://instagram.com/regirock365",
@@ -82,6 +73,12 @@ const webPresence = [
     url: "https://pinterest.com/regirock365",
     username: "regirock365",
     icon: Pinterest,
+  },
+  {
+    name: "Instagram Photography",
+    url: "https://instagram.com/regirock.photo",
+    username: "regirock.photo",
+    icon: Instagram,
   },
 ];
 
@@ -216,7 +213,7 @@ const Home: React.FC<Props> = ({ photos }) => {
       <div
         className={classNames(
           "area hidden transition lg:block",
-          showLight ? "" : "hide"
+          showLight ? "" : "hide",
         )}
       >
         <div className="wire"></div>
@@ -228,7 +225,7 @@ const Home: React.FC<Props> = ({ photos }) => {
         <div
           className={classNames(
             "bulb cursor-pointer transition",
-            showLight && lightOn ? "light" : ""
+            showLight && lightOn ? "light" : "",
           )}
           onClick={() => {
             setLightOn(!lightOn);
@@ -244,7 +241,7 @@ const Home: React.FC<Props> = ({ photos }) => {
         <button
           className={classNames(
             "rounded-md bg-gray-100/50 p-2 text-gray-800 transition hover:bg-gray-100 dark:bg-slate-800/50 dark:text-slate-700 dark:hover:bg-slate-800/75",
-            guidelines ? "opacity-100" : "opacity-25"
+            guidelines ? "opacity-100" : "opacity-25",
           )}
           onClick={() => {
             setGuidelines(!guidelines);
@@ -272,7 +269,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                     className={classNames(
                       "flex items-center gap-2 rounded-md p-2 md:pr-12",
                       active ? "bg-gray-200 dark:bg-slate-700" : "",
-                      theme === "light" ? "text-sky-500" : ""
+                      theme === "light" ? "text-sky-500" : "",
                     )}
                     onClick={() => {
                       setTheme("light");
@@ -283,7 +280,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                         "w-6 text-gray-500 dark:text-slate-400",
                         theme === "light"
                           ? "text-sky-600 dark:text-sky-600"
-                          : ""
+                          : "",
                       )}
                     />
                     Light
@@ -296,7 +293,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                     className={classNames(
                       "flex items-center gap-2 rounded-md p-2 md:pr-12",
                       active ? "bg-gray-200 dark:bg-slate-700" : "",
-                      theme === "dark" ? "text-sky-500" : ""
+                      theme === "dark" ? "text-sky-500" : "",
                     )}
                     onClick={() => {
                       setTheme("dark");
@@ -305,7 +302,9 @@ const Home: React.FC<Props> = ({ photos }) => {
                     <Moon
                       className={classNames(
                         "w-6 text-gray-500 dark:text-slate-400",
-                        theme === "dark" ? "text-sky-600 dark:text-sky-600" : ""
+                        theme === "dark"
+                          ? "text-sky-600 dark:text-sky-600"
+                          : "",
                       )}
                     />
                     Dark
@@ -318,7 +317,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                     className={classNames(
                       "flex items-center gap-2 rounded-md p-2 md:pr-12",
                       active ? "bg-gray-200 dark:bg-slate-700" : "",
-                      theme === "system" ? "text-sky-500" : ""
+                      theme === "system" ? "text-sky-500" : "",
                     )}
                     onClick={() => {
                       setTheme("system");
@@ -329,7 +328,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                         "w-6 text-gray-500 dark:text-slate-400",
                         theme === "system"
                           ? "text-sky-600 dark:text-sky-600"
-                          : ""
+                          : "",
                       )}
                     />
                     System
@@ -364,7 +363,7 @@ const Home: React.FC<Props> = ({ photos }) => {
           // "url(https://res.cloudinary.com/projectgroceries/image/upload/v1626779778/regirock365/wp7420571_fg16eo.jpg)",
         }}
       >
-        <div className="h-[600px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur dark:from-slate-900/25 dark:to-slate-900 2xl:h-[750px]" />
+        <div className="h-[600px] w-screen bg-gradient-to-b from-white/25 to-white backdrop-blur dark:from-slate-900/25 dark:to-slate-900 xl:h-[750px] 2xl:h-[1000px]" />
       </div>
       <div className="sticky pb-16">
         <header className="flex items-center">
@@ -381,7 +380,7 @@ const Home: React.FC<Props> = ({ photos }) => {
           <div className="ml-3 md:ml-6">
             <h1>regirock365</h1>
             <span className="text-xl text-gray-800 dark:text-slate-100">
-              Programmer/Screenwriter (Manifesting)
+              Programmer / Screenwriter / Photographer
             </span>
           </div>
         </header>
@@ -416,21 +415,21 @@ const Home: React.FC<Props> = ({ photos }) => {
               <h2 className="mb-3 md:mb-6">My Work</h2>
               <div className="flex items-center gap-4">
                 <div className="flex items-center gap-1">
-                  <span className="h-4 w-4 rounded-full bg-amber-500/50" />
+                  <span className="h-4 w-4 rounded-full bg-green-500/50" />
                   <span className="text-sm text-gray-600 dark:text-slate-300">
                     Major
                   </span>
                 </div>
 
                 <div className="flex items-center gap-1">
-                  <span className="bg-gray-300/300 h-4 w-4 rounded-full bg-gray-300/50 dark:bg-slate-700/50" />
+                  <span className="bg-gray-300/300 h-4 w-4 rounded-full bg-amber-300/50" />
                   <span className="text-sm text-gray-600 dark:text-slate-300">
                     Minor
                   </span>
                 </div>
 
                 <div className="flex items-center gap-1">
-                  <span className="h-4 w-4 rounded-full bg-green-500/50" />
+                  <span className="h-4 w-4 rounded-full bg-violet-500/50" />
                   <span className="text-sm text-gray-600 dark:text-slate-300">
                     Freelance
                   </span>
@@ -447,10 +446,10 @@ const Home: React.FC<Props> = ({ photos }) => {
                   className={classNames(
                     "flex flex-shrink-0 flex-grow flex-col rounded-lg p-2 transition hover:bg-gray-200/75 dark:hover:bg-slate-800/75 md:flex-row",
                     project.type === "major"
-                      ? "border-2 border-amber-500/50 hover:border-amber-500"
-                      : project.type === "freelance"
                       ? "border-2 border-green-500/50 hover:border-green-500"
-                      : "border-2 border-gray-300/50 hover:border-gray-400 dark:border-slate-700/50 dark:hover:border-slate-600"
+                      : project.type === "freelance"
+                      ? "border-2 border-violet-500/50 hover:border-violet-500"
+                      : "border-2 border-amber-300/50 hover:border-amber-400",
                   )}
                 >
                   <div
@@ -458,7 +457,7 @@ const Home: React.FC<Props> = ({ photos }) => {
                       "mr-3 h-32 w-full rounded-lg bg-cover bg-center shadow-lg md:mr-6 md:h-24 md:w-32",
                       project.soon
                         ? "to animate-pulse cursor-wait bg-red-500 bg-gradient-to-tr from-yellow-500 via-amber-500"
-                        : ""
+                        : "",
                     )}
                     style={
                       project.soon && !project.imageURL
@@ -489,9 +488,9 @@ const Home: React.FC<Props> = ({ photos }) => {
 
         <Videos showGuidingLines={guidelines} />
 
-        <PersonalSites showGuidingLines={guidelines} />
+        {/* <PersonalSites showGuidingLines={guidelines} /> */}
 
-        <Unsplash photos={photos} key="og" showGuidingLines={guidelines} />
+        {/* <Unsplash photos={photos} key="og" showGuidingLines={guidelines} /> */}
 
         {/* <FlexZone showGuidingLines={guidelines} /> */}
 
